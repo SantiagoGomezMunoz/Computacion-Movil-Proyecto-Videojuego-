@@ -1,0 +1,11 @@
+# Ignora todos los archivos de texto
+*.meta
+
+# Ignora todos los archivos de texto
+*.cs.meta
+
+# Ignora todos los archivos de texto
+Library
+
+# Ignora todos los archivos de texto
+*.log
