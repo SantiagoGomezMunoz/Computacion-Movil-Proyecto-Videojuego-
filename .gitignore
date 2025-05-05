@@ -8,4 +8,7 @@
 Library
 
 # Ignora todos los archivos de texto
+Logs
+
+# Ignora todos los archivos de texto
 *.log
