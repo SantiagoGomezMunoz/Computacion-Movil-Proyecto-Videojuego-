@@ -1,14 +1,10 @@
-# Ignora todos los archivos de texto
-*.meta
-
-# Ignora todos los archivos de texto
-*.cs.meta
-
-# Ignora todos los archivos de texto
-Library
-
-# Ignora todos los archivos de texto
-Logs
-
-# Ignora todos los archivos de texto
-*.log
+/Library/
+/Temp/
+/Logs/
+/obj/
+/UserSettings/
+.vs/
+SwitchIL2CPPCache/
+SwitchIL2CPPStats/
+*.csproj
+*.sln

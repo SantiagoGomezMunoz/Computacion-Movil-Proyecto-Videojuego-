@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7fd85caef23decf408976904c44cdfe0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - corazonLleno: {fileID: 21300000, guid: fb48bdebd386c4949955d7f42b91ee2b, type: 3}
+  - corazonVacio: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
