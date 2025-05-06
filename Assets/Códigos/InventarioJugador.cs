@@ -7,7 +7,12 @@ public class InventarioJugador : MonoBehaviour
     public GameObject[] objetosEnInventario = new GameObject[3];
     public int casillaSeleccionada = 0;
     public Transform puntoDeSoltar;
-    public Image imagenPorDefecto;
+    public Sprite imagenPorDefecto;
+
+    void Start() 
+    {
+    Debug.Log($"🟡 Start() de InventarioJugador en objeto: {gameObject.name} — imagenPorDefecto: {(imagenPorDefecto != null ? imagenPorDefecto.name : "NULL")}", gameObject);
+    }
 
     void Update()
     {
@@ -85,7 +90,8 @@ public class InventarioJugador : MonoBehaviour
 
             objetosEnInventario[casillaSeleccionada] = null;
             // Cambia nuevamente el sprite del slot
-            casillas[casillaSeleccionada].sprite = imagenPorDefecto.sprite;
+            casillas[casillaSeleccionada].sprite = imagenPorDefecto;
+            Debug.Log("Sprite restablecido a: " + imagenPorDefecto);
             casillas[casillaSeleccionada].enabled = true;
 
             ActualizarHUD();
