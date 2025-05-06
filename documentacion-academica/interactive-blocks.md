@@ -1,8 +1,8 @@
 ---
-icon: hand-pointer
+icon: file-xls
 ---
 
-# Interactive blocks
+# Matriz de Partes Interesadas
 
 In addition to the default Markdown you can write, GitBook has a number of out-of-the-box interactive blocks you can use. You can find interactive blocks by pressing `/` from within the editor.
 
@@ -47,4 +47,3 @@ Expandable blocks are helpful in condensing what could otherwise be a lengthy pa
 {% hint style="info" %}
 GitBook supports thousands of embedded websites out-of-the-box, simply by pasting their links. Feel free to check out which ones[ are supported natively](https://iframely.com).
 {% endhint %}
-

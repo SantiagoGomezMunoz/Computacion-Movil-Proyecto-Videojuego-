@@ -1,8 +1,8 @@
 ---
-icon: plug-circle-plus
+icon: file-doc
 ---
 
-# Integrations
+# Matriz de Requisitos
 
 GitBook integrations allow you to connect your GitBook spaces to some of your favorite platforms and services. You can install integrations into your GitBook page from the _Integrations_ menu in the top left.
 
