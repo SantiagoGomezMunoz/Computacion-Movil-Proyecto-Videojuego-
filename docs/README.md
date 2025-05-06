@@ -2,7 +2,7 @@
 icon: bullseye-arrow
 ---
 
-# Quicskstart
+# HOLAAAAAAAAAAAAA
 
 <figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-hero.png" alt=""><figcaption></figcaption></figure>
 
