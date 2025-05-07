@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Bienvenida
+# Introducción
 
 Bienvenidos a la documentación vía GitBook del proyecto CypherCTRL, un videojuego 2.5D con temática post-apocalíptica desarrollado en el motor multi plataforma Unity.
 
@@ -28,6 +28,3 @@ Combinando una serie de mecánicas varias para enriquecer la forma en cómo de d
 
 Dentro de las siguientes ventanas, podrá acceder a más información importante sobre el videojuego y de lo que se compone.
 
-### Accesos directos
-
-<table data-view="cards"><thead><tr><th></th><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th></tr></thead><tbody><tr><td><strong>Visión de las mecánicas</strong></td><td>La forma en la que el juego fue visualizada por el Equipo de Desarrollo</td><td><a href="sobre-el-videojuego/quickstart.md">quickstart.md</a></td><td></td><td></td></tr><tr><td><strong>Diseño de mecánicas</strong></td><td>Es la manera en cómo se han pensado las mecánicas que componen el videojuego</td><td><a href="sobre-el-videojuego/publish-your-docs.md">publish-your-docs.md</a></td><td></td><td></td></tr><tr><td><strong>Arquitectura del software</strong></td><td>La arquitectura que se escogió para el desarrolló, cómo se aplicó y por qué se escogió</td><td><a href="arquitectura-del-software.md">arquitectura-del-software.md</a></td><td></td><td></td></tr><tr><td><strong>Pruebas y calidad</strong></td><td>El registro de las pruebas que se han realizado y recopilación de errores comunes y cómo se solucionaron.</td><td><a href="pruebas-y-calidad.md">pruebas-y-calidad.md</a></td><td></td><td></td></tr></tbody></table>
