@@ -4,9 +4,9 @@ description: >-
   lógica y el procesamiento del software. Permitiendo su buen funcionamiento.
 ---
 
-# Backend (C Sharp)
+# Backend (Lógica del videojuego)
 
-El término backend tradicionalmente usado en aplicaciones web no aplica del todo bien al desarrollo de videojuegos, por lo que se le llamará **Lógica del juego.**
+El término backend tampoco aplica del todo bien al desarrollo de videojuegos igual que en el desarrollo web, por lo que se le llamará **Lógica del juego.**
 
 La lógica del videojuego fue hecho utilizando C Sharp para cada uno de los scripts que sirven de componentes para los diferentes GameObjects y les brindan sus respectivas funcionalidades, funcionalidades que pueden ser exclusivas de un solo Objeto o compartidas por varios al mismo tiempo. Unity se encarga de ejecutar este código `C#` como lógica del juego.&#x20;
 
