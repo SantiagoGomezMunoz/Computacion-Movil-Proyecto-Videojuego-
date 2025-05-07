@@ -3,7 +3,7 @@
 * [Introducción](README.md)
 * [Arquitectura](arquitectura/README.md)
   * [Frontend](arquitectura/frontend.md)
-  * [Backend](arquitectura/backend.md)
+  * [Backend (C Sharp)](arquitectura/backend-c-sharp.md)
 * [API's](apis.md)
 * [Integración de IA](integracion-de-ia.md)
 * [Manual de usuario](manual-de-usuario.md)
