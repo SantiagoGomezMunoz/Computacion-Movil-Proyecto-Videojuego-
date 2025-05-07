@@ -20,8 +20,14 @@ layout:
 
 # Bienvenida
 
-Bienvenidos a la documentación vía GitBook del proyecto CypherCTRL, un videojuego 2.5D con temática post-apocalíptica desarrollado en el motor multiplaforma Unity.
+Bienvenidos a la documentación vía GitBook del proyecto CypherCTRL, un videojuego 2.5D con temática post-apocalíptica desarrollado en el motor multi plataforma Unity.
 
-### Jump right in
+Este proyecto nace de la necesidad de visualizar y tratar la actual dependencia de la tecnología emergente más popular de la actualidad, la cual es la Inteligencia Artificial mediante un medio interactivo como lo es un videojuego. Mostrando al usuario un videojuego con una atmósfera lúgubre y una historia en la que se pueda ver envuelto.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Create your first site</td><td></td><td></td><td><a href="sobre-el-videojuego/quickstart.md">quickstart.md</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics of GitBook</td><td></td><td></td><td><a href="broken-reference/">broken-reference</a></td></tr><tr><td><strong>Publish your docs</strong></td><td>Share your docs online</td><td></td><td></td><td><a href="sobre-el-videojuego/publish-your-docs.md">publish-your-docs.md</a></td></tr></tbody></table>
+Combinando una serie de mecánicas varias para enriquecer la forma en cómo de desarrolla la historia del videojuego.&#x20;
+
+Dentro de las siguientes ventanas, podrá acceder a más información importante sobre el videojuego y de lo que se compone.
+
+### Accesos directos
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Visión del videojuego</td><td>La forma en la que el juego fue visualizada por el Equipo de Desarrollo</td><td></td><td></td><td><a href="sobre-el-videojuego/quickstart.md">quickstart.md</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics of GitBook</td><td></td><td></td><td><a href="broken-reference/">broken-reference</a></td></tr><tr><td><strong>Publish your docs</strong></td><td>Share your docs online</td><td></td><td></td><td><a href="sobre-el-videojuego/publish-your-docs.md">publish-your-docs.md</a></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
