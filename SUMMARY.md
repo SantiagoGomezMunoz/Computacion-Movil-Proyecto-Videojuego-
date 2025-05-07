@@ -35,4 +35,4 @@
 * [Créditos de Equipo y Colaboradores](anexos/creditos-de-equipo-y-colaboradores.md)
 * [Recursos visuales utilizados](anexos/recursos-visuales-utilizados.md)
 * [Licencias y atribuciones](anexos/licencias-y-atribuciones.md)
-* [Mockups, storyboard, bocetos](anexos/mockups-storyboard-bocetos.md)
+* [Diseños Preliminares](anexos/disenos-preliminares.md)
