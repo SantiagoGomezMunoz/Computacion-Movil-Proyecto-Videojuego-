@@ -4,7 +4,7 @@ description: >-
   más a la mano del usuario y con la que puede interactuar.
 ---
 
-# Frontend (Capa visual)
+# Frontend (Capa visual del videojuego)
 
 El término frontend no se suele usar en el desarrollo de videojuegos de la misma forma que en el desarrollo web, sin embargo hay más significados válidos adaptados, como **Capa visual**.
 
