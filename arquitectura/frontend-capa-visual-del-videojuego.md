@@ -10,11 +10,6 @@ El término frontend no se suele usar en el desarrollo de videojuegos de la mism
 
 La capa visual del videojuego CypherCTRL está desarrollado utilizando **Canvas UI** de Unity para los elementos visibles en la interfaz dentro del juego, **Sprites** e **imágenes PNG** para mostrar los íconos de los objetos obtenibles como **Items** y **TextMeshPro** para la implementación de textos de alta calidad visual en la interfaz. &#x20;
 
-Ofrece una interfaz visual minimalista y limpia, permitiendo al jugador tomar decisiones en tiempo real de forma eficiente. Integrando los siguientes elementos.
+Ofrece una interfaz visual minimalista y limpia, permitiendo al jugador tomar decisiones en tiempo real de forma eficiente.&#x20;
 
-* HUD en la parte superior izquierda representando la vida que el jugador dispone.&#x20;
-* Contador de munición restante en la parte inferior izquierda.
-* Inventario con tres espacios disponibles para almacenar objetos obtenibles como armas y consumibles, seleccionables con las teclas 1, 2 y 3.
-* Sistema de nivelación progresiva que aumenta al derrotar enemigos.
-
-<figure><img src="../.gitbook/assets/Documentación.png" alt="" width="375"><figcaption><p>Escenario Pueblo</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Imagen de WhatsApp 2025-05-09 a las 01.45.14_f5fd891b.jpg" alt="" width="563"><figcaption><p>Parte del escenario de juego</p></figcaption></figure>
