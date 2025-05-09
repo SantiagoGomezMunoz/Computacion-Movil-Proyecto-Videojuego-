@@ -101,7 +101,7 @@ El siguiente fragmento de código perteneciente al mismo script `EnemigorSeguido
 
 **Reacción al jugador (Recibir el daño y retroceso):**
 
-El siguiente fragmento de código se encarga de gestionar el cómo el enemigo reacciona a los ataques el jugador, haciendo posible que reciba daño, además de que cuando su vida llegue a 0 el enemigo muera.
+El siguiente fragmento de código alojado en `EnemigoSeguidor.cs` se encarga de gestionar el cómo el enemigo reacciona a los ataques el jugador, haciendo posible que reciba daño, además de que cuando su vida llegue a 0 el enemigo muera.
 
 ```csharp
     public void RecibirDaño(int cantidad)
@@ -132,7 +132,7 @@ El siguiente fragmento de código se encarga de gestionar el cómo el enemigo re
 
 4. **Representación visual del Daño:**
 
-Cuando el enemigo reciba cualquier tipo de daño de parte del jugador, sea daño con arma cuerpo a cuerpo o con arma de fuego, cambiará de color a un rojo intenso por un tiempo reducido para indicarle al jugador que efectivamente el enemigo recibió daño. También retrocediendo ligeramente con cada golpe.
+Finalmente, en el mismo script `EnemigoSeguidor.cs` cuando el enemigo reciba cualquier tipo de daño de parte del jugador, sea daño con arma cuerpo a cuerpo o con arma de fuego, cambiará de color a un rojo intenso por un tiempo reducido para indicarle al jugador que efectivamente el enemigo recibió daño. También retrocediendo ligeramente con cada golpe.
 
 ```csharp
     IEnumerator FeedbackDaño()
