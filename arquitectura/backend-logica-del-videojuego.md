@@ -12,6 +12,17 @@ La lógica del videojuego fue hecho utilizando C Sharp para cada uno de los scri
 
 La lógica en general del videojuego se estructuran de la clase principal `MonoBehaviour`, permitiendo que el script en cuestión pueda ser agregado como componente a un objeto dentro de la escena, proporcionando el acceso a las funciones que el script contenga y que el motor permita. &#x20;
 
+Dentro de los scripts internos indispensables para el videojuego están:\
+`NiveldeJugador.cs`\
+`InventarioJugador.cs`\
+`EnemigoSeguidor.cs`\
+`VidaJugador.cs`\
+`MovimientoPersonaje.cs`\
+`ArmaADistancia.cs`\
+`Proyectil.cs`
+
+A continuación se mostrará un ejemplo de una de las mecánicas principales del juego. La mecánica de combate, específicamente en su apartado de combate a largo alcance con los scripts `ArmaADistancia.cs` y `Proyectil.cs`
+
 **Ejemplo: Sistema de combate**
 
 Este sistema le permite al jugador disparar varios proyectiles únicamente si posee un arma equipada en su inventario, en el momento en que el jugador presiona el click izquierdo, un proyectil sale del jugador en la dirección en la que este mire.&#x20;
