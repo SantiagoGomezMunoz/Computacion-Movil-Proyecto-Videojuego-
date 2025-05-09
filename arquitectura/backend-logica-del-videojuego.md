@@ -18,40 +18,56 @@ Este sistema le permite al jugador disparar varios proyectiles únicamente si po
 
 Para ello se necesitan dos componentes:
 
-**`Arma.cs`:** Su función es controlar la generación de los proyectiles y reducir la munición cuando el jugador dispare.
+**`ArmaADistancia.cs`:** Su función es controlar la generación de los proyectiles y reducir la munición cuando el jugador dispare.
 
-<pre><code>public void Disparar()
-{
-   if (municionActual &#x3C;= 0 || proyectilPrefab == null || puntoDisparo == null) return;
-<strong>
-</strong><strong>   Vector3 direccionDisparo = movimientoJugador?.ultimaDireccionMovimiento ?? puntoDisparo.forward;
-</strong>
-   GameObject proyectil = Instantiate(proyectilPrefab, puntoDisparo.position, Quaternion.LookRotation(direccionDisparo));
-   Rigidbody rb = proyectil.GetComponent&#x3C;Rigidbody>();
+```csharp
+    public void Usar()
+    {
+        if (municionActual <= 0 || proyectilPrefab == null || puntoDisparo == null) return;
 
-   if (rb != null)
-   {
-       rb.linearVelocity = direccionDisparo * velocidadProyectil;
-<strong>   }
-</strong>
-   municionActual--;
+        Vector3 direccionDisparo = Vector3.forward;
+
+        // Obtener la dirección desde el script de movimiento
+        if (movimientoJugador != null)
+        {
+            direccionDisparo = movimientoJugador.ultimaDireccionMovimiento;
+        }
+
+        if (direccionDisparo == Vector3.zero)
+        {
+            direccionDisparo = puntoDisparo.forward; // fallback
+        }
+
+        GameObject proyectil = Instantiate(proyectilPrefab, puntoDisparo.position, Quaternion.LookRotation(direccionDisparo));
+        Rigidbody rb = proyectil.GetComponent<Rigidbody>();
+
+        if (rb != null)
+        {
+            rb.linearVelocity = direccionDisparo * velocidadProyectil;
+        }
+
+        municionActual--;
+    }
 }
-</code></pre>
+```
 
 **`Proyectil.cs`:** Se encarga de definir el comportamiento del proyectil al disparar, destruyéndose de forma automática al cabo de unos segundos o instantáneamente al impactar con un enemigo.
 
-<pre><code>void OnCollisionEnter(Collision collision)
+```csharp
+void OnCollisionEnter(Collision collision)
 {
-   if (collision.gameObject.CompareTag("Enemigo"))
-   {
-       EnemigoSeguidor enemigo = collision.gameObject.GetComponent();
-       if (enemigo != null)
-       {
-          enemigo.RecibirDaño(daño);
-       }    
-       Destroy(gameObject);
-<strong>   }
-</strong>}
-</code></pre>
+    // Verifica si el objeto tiene el tag "Enemigo"
+    if (collision.gameObject.CompareTag("Enemigo"))
+    {
+        EnemigoSeguidor enemigo = collision.gameObject.GetComponent<EnemigoSeguidor>();
+        if (enemigo != null)
+        {
+            enemigo.RecibirDaño(daño); // Aplica daño configurable
+        }
+
+        Destroy(gameObject); // Destruye el proyectil tras impactar
+    }
+}
+```
 
 Ambos scripts deben comunicarse con otros componentes para funcionar. `Arma.cs` con `MovimientoPersonaje` para saber en qué dirección el disparo saldrá y `Proyectil.cs` se comunica con `EnemigoSeguidor` para aplicarle el daño.
