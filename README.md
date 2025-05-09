@@ -1,23 +1,3 @@
----
-icon: hand-wave
-cover: https://gitbookio.github.io/onboarding-template-images/header.png
-coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Introducción
 
 Bienvenidos a la documentación vía GitBook del proyecto CypherCTRL, un videojuego 2.5D con temática post-apocalíptica desarrollado en el motor multi plataforma Unity.
