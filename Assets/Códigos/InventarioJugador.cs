@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class InventarioJugador : MonoBehaviour
 {
-    public Image[] casillas; // Asigna en el Inspector
+    public Image[] casillas; // Se a asigna en el Inspector
     public GameObject[] objetosEnInventario = new GameObject[3];
     public int casillaSeleccionada = 0;
     public Transform puntoDeSoltar;
@@ -11,7 +11,6 @@ public class InventarioJugador : MonoBehaviour
 
     void Start() 
     {
-    Debug.Log($"🟡 Start() de InventarioJugador en objeto: {gameObject.name} — imagenPorDefecto: {(imagenPorDefecto != null ? imagenPorDefecto.name : "NULL")}", gameObject);
     }
 
     void Update()
@@ -74,7 +73,6 @@ public class InventarioJugador : MonoBehaviour
         GameObject objeto = objetosEnInventario[casillaSeleccionada];
         if (objeto != null)
         {
-            // Si tienes punto de soltar asignado, úsalo. Si no, suéltalo frente al jugador.
             Vector3 posicionSoltar = (puntoDeSoltar != null)
                 ? puntoDeSoltar.position
                 : transform.position + transform.forward;
