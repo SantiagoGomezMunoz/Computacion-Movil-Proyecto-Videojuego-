@@ -5,7 +5,7 @@ public class VidaJugador : MonoBehaviour
     public int vidaMaxima = 5;
     public int vidaActual;
 
-    public GameObject[] corazones; // Ahora arrastras directamente los objetos visuales
+    public GameObject[] corazones; 
 
     void Start()
     {
