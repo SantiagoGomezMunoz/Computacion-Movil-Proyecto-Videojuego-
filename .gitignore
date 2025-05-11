@@ -7,4 +7,5 @@
 SwitchIL2CPPCache/
 SwitchIL2CPPStats/
 *.csproj
-*.sln
+*.sln*.blend
+*.blendS

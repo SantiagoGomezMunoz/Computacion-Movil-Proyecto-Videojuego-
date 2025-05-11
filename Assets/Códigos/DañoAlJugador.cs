@@ -1,16 +1,39 @@
 using UnityEngine;
 
-public class DañoAlJugador : MonoBehaviour
+public class DanoAlJugador : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public int daño = 1;
+    public float tiempoEntreAtaques = 2f;
+    private float ultimoAtaque = -Mathf.Infinity;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        // Se mira si el objeto con el que colisionamos tiene la etiqueta Player
+        if (collision.gameObject.CompareTag("Player"))
         {
-            VidaJugador vida = other.GetComponent<VidaJugador>();
+            IntentarHacerDaño(collision.gameObject);
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        // Se mira si el objeto con el que se está colisionando es el jugador
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            IntentarHacerDaño(collision.gameObject);
+        }
+    }
+
+    void IntentarHacerDaño(GameObject jugador)
+    {
+        // Para verificar si hay buen tiempo entre los ataques
+        if (Time.time - ultimoAtaque >= tiempoEntreAtaques)
+        {
+            VidaJugador vida = jugador.GetComponent<VidaJugador>();
             if (vida != null)
             {
-                vida.TomarDaño(1);
-                Debug.Log("¡El jugador recibió daño!");
+                vida.TomarDaño(daño);
+                ultimoAtaque = Time.time;
             }
         }
     }
