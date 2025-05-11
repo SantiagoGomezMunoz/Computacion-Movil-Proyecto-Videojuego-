@@ -18,7 +18,7 @@ public class PlayerLevel : MonoBehaviour
 
     void Update()
     {
-        // Solo para prueba: ganar XP al presionar tecla
+        // Ganar xp con la X solo para prueba
         if (Input.GetKeyDown(KeyCode.X))
         {
             GanarExperiencia(25);
@@ -39,7 +39,7 @@ public class PlayerLevel : MonoBehaviour
     void SubirNivel()
     {
         nivel++;
-        xpNecesaria += 25; // Aumenta dificultad
+        xpNecesaria += 25; // Aumenta dificultad para subir de nivel
     }
 
     void ActualizarUI()
