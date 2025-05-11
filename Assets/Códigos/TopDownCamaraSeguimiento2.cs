@@ -2,21 +2,19 @@ using UnityEngine;
 
 public class TopDownCamaraSeguimiento2 : MonoBehaviour
 {
- public Transform target;  // El objeto que la cámara debe seguir (en este caso, el cilindro)
+ public Transform target;  // El cilindro que la camara debe seguir
     public float followDistance = 20f;  // Distancia fija en el eje Y
-    public float smoothSpeed = 0.125f;  // Velocidad de suavizado para hacer el movimiento más fluido
+    public float smoothSpeed = 0.125f;  // Velocidad suavizada
 
     private Vector3 offset;  // Desplazamiento de la cámara respecto al cilindro
 
     void Start()
     {
-       // Posicionamos la cámara arriba y un poco hacia atrás del personaje,
-        // pero también le damos una vista diagonal rotando el offset en Y
-        float yRotationDegrees = 90f; // Grados que quieres inclinar sobre el eje Y
+        float yRotationDegrees = 90f; // Grados de inclinación sobre el eje Y
         Quaternion rotation = Quaternion.Euler(10f, yRotationDegrees, 0);
         offset = rotation * new Vector3(0, followDistance + 5f, -followDistance); // Arriba y hacia atrás, rotado
 
-        // Inclinación vertical para que mire hacia el personaje desde arriba en diagonal
+        // Inclinación vertical
         transform.rotation = Quaternion.Euler(30f, yRotationDegrees, 0); // X = inclinación hacia abajo, Y = ángulo lateral
     }
 
@@ -24,7 +22,7 @@ public class TopDownCamaraSeguimiento2 : MonoBehaviour
     {
          if (target == null)
     {
-        Debug.LogWarning("La cámara no tiene asignado un 'target'. Asigna el cilindro o cápsula en el Inspector.");
+        Debug.LogWarning("La cámara no tiene asignado un 'target'");
         return;
     }
 
