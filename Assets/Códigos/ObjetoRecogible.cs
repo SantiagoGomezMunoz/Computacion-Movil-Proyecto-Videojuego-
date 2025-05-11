@@ -22,7 +22,6 @@ public class ObjetoRecogible : MonoBehaviour
         }
     }
 
-    // Este método lo llamaremos al soltar
     public void ActivarCooldown()
     {
         puedeRecogerse = false;
