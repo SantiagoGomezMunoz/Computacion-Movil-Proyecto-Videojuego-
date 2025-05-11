@@ -21,18 +21,18 @@ public class MovimientoPersonaje : MonoBehaviour
 
         Vector3 direccion = new Vector3(inputZ, 0f, -inputX).normalized;
 
-        // Si hay colisión, comprobamos si el jugador quiere empujar contra ella
+        // Si hay colisión, se mira si el jugador va en contra de ella
         if (direccionBloqueada)
         {
             float empuje = Vector3.Dot(direccion, -normalColision);
             if (empuje > 0.5f)
             {
-                // Está empujando hacia la colisión → bloquear movimiento
+                // Si está tocando la colisión, detiene el movimiento
                 return;
             }
             else
             {
-                // Se está moviendo en otra dirección → desbloquear
+                // Si NO está tocando la colisión, sigue el movimiento
                 direccionBloqueada = false;
                 normalColision = Vector3.zero;
             }
