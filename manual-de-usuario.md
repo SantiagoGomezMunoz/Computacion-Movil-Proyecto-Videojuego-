@@ -13,10 +13,10 @@ icon: book-open-cover
 
 2. **Pantalla de título:**
 
-<figure><img src=".gitbook/assets/image (12).png" alt="" width="563"><figcaption><p>Pantalla de título del videojuego CypherCTRL, mostrando su versión 0.7 de desarrollo.</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption><p>Pantalla de título del videojuego CypherCTRL, en su versión 0.75.</p></figcaption></figure>
 
-Para la versión en la que el videojuego se encuentra (Versión 0.7), la pantalla de título solo cuenta con el logo del videojuego, un fondo reflejando una ciudad desolada y dos botones, Jugar (Enviará al jugador directamente al escenario principal del juego) y Salir (Saldrá del juego). \
-<sup>La documentación irá cambiando a medida que el juego se acerque a su Versión 1.0, para mantenerla actualizada con los cambios más actuales.</sup>&#x20;
+Para la versión en la que el videojuego se encuentra (Versión 0.75), la pantalla de título solo cuenta con el logo del videojuego, un fondo reflejando una ciudad desolada y dos botones, Jugar (Enviará al jugador directamente al escenario principal del juego) y Salir (Saldrá del juego). \
+<sup>La documentación irá cambiando a medida que el juego se acerque a su Versión 1.0 para mantenerla actualizada con los cambios más actuales.</sup>&#x20;
 
 1. **Controles:**\
    \
