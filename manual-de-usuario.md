@@ -13,9 +13,9 @@ icon: book-open-cover
 
 2. **Pantalla de título:**
 
-<figure><img src=".gitbook/assets/image (9).png" alt="" width="563"><figcaption><p>Pantalla de título, mostrando la versión 0.5 del desarrollo de CypherCTRL</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (12).png" alt="" width="563"><figcaption><p>Pantalla de título del videojuego CypherCTRL, mostrando su versión 0.7 de desarrollo.</p></figcaption></figure>
 
-Para la versión en la que el videojuego se encuentra (Versión 0.5), la pantalla de título solo cuenta con el logo del videojuego, un fondo reflejando una ciudad desolada y dos botones, Jugar (Enviará al jugador directamente al escenario principal del juego) y Salir (Saldrá del juego). \
+Para la versión en la que el videojuego se encuentra (Versión 0.7), la pantalla de título solo cuenta con el logo del videojuego, un fondo reflejando una ciudad desolada y dos botones, Jugar (Enviará al jugador directamente al escenario principal del juego) y Salir (Saldrá del juego). \
 <sup>La documentación irá cambiando a medida que el juego se acerque a su Versión 1.0, para mantenerla actualizada con los cambios más actuales.</sup>&#x20;
 
 1. **Controles:**\
@@ -44,6 +44,14 @@ Para la versión en la que el videojuego se encuentra (Versión 0.5), la pantall
 **Barra de experiencia:** En la parte superior hay una barra de experiencia la cual va aumentando de nivel al jugador a medida que este derrota enemigos.
 
 <figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption><p>Barra de experiencia</p></figcaption></figure>
+
+**Objetivos Secundarios y Principales:** Es un sistema de objetivos/misiones con una misión principal para continuar con el desarrollo de la historia y dos misiones secundarias para que el jugador realice si gusta, pero no son obligatorias para completar el juego.
+
+<figure><img src=".gitbook/assets/image (10).png" alt=""><figcaption><p>Sistema de objetivos</p></figcaption></figure>
+
+**Visualizado de controles:** Un pequeño texto justo debajo de la barra de experiencia, donde el jugador puede ver los controles que tiene el videojuego en su haber. Si el jugador desea no ver este texto, puede presionar la tecla R para ocultarlo, y si desea volverlo a ver para recordar algún control solo basta con presionar la tecla R nuevamente.&#x20;
+
+<figure><img src=".gitbook/assets/image (11).png" alt=""><figcaption><p>Controles visibles</p></figcaption></figure>
 
 4. **Objetos Obtenibles:**
 
