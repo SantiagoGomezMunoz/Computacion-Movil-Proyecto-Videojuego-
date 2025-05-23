@@ -1,5 +1,15 @@
-//using UnityEngine;
+using UnityEngine;
 
+public class GameManager : MonoBehaviour
+{
+    public AudioSource musicaFondo;
+
+    void Start()
+    {
+        if (!musicaFondo.isPlaying)
+            musicaFondo.Play();
+    }
+}
 //public class GameManager : MonoBehaviour
 //{
     //public VidaJugador vidaJugador;

@@ -6,7 +6,11 @@ public class MovimientoPersonaje : MonoBehaviour
     public float velocidad = 5f;
     private Rigidbody rb;
 
+    public AudioSource pasosAudio;
+    public AudioClip sonidoPasos;
+
     private bool direccionBloqueada = false;
+    public Vector2 DireccionMovimiento { get; private set; }
     private Vector3 normalColision = Vector3.zero;
     public Vector3 ultimaDireccionMovimiento { get; private set; } = Vector3.forward;
 
@@ -20,9 +24,12 @@ public class MovimientoPersonaje : MonoBehaviour
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputZ = Input.GetAxisRaw("Vertical");
 
+        DireccionMovimiento = new Vector2(inputX, inputZ);
+
         Vector3 direccion = new Vector3(inputZ, 0f, -inputX).normalized;
+        bool seEstaMoviendo = direccion.magnitude > 0.1f;
     
-        if (direccion.magnitude > 0.1f)
+        if (seEstaMoviendo)
         {
             ultimaDireccionMovimiento = direccion;
             Quaternion rotacionObjetivo = Quaternion.LookRotation(direccion);
@@ -41,8 +48,8 @@ public class MovimientoPersonaje : MonoBehaviour
             }
             else
             {
-            direccionBloqueada = false;
-            normalColision = Vector3.zero;
+                direccionBloqueada = false;
+                normalColision = Vector3.zero;
 
                 // Si NO está tocando la colisión, sigue el movimiento
                 direccionBloqueada = false;
@@ -51,6 +58,17 @@ public class MovimientoPersonaje : MonoBehaviour
         }
             
         rb.MovePosition(rb.position + direccion * velocidad * Time.deltaTime);
+
+        if (seEstaMoviendo && !pasosAudio.isPlaying)
+        {
+            pasosAudio.clip = sonidoPasos;
+            pasosAudio.loop = true;
+            pasosAudio.Play();
+        }
+        else if (!seEstaMoviendo && pasosAudio.isPlaying)
+        {
+            pasosAudio.Stop();
+        }
     }
       
 }

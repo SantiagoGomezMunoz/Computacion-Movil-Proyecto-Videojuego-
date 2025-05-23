@@ -24,6 +24,10 @@ public class EnemigoSeguidor : MonoBehaviour
     private float tiempoEspera = 0f; // Tiempo restante de espera
     private float tiempoMovimiento = 0f; // Tiempo restante de movimiento
     private Vector3 direccionPatrulla = Vector3.zero; // Dirección actual de patrullaje
+    
+    public AudioClip sonidoDaño;
+    public AudioClip sonidoMuerte; 
+    private AudioSource audioSource;
 
     void Start()
     {
@@ -36,6 +40,8 @@ public class EnemigoSeguidor : MonoBehaviour
         {
             colorOriginal = renderers[0].material.color;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -120,6 +126,11 @@ public class EnemigoSeguidor : MonoBehaviour
         // Cambio de color
         StartCoroutine(CambiarColorTemporal());
 
+        if (audioSource != null && sonidoDaño != null)
+        {
+            audioSource.PlayOneShot(sonidoDaño); 
+        }
+
         if (vida <= 0)
         {
             Morir();
@@ -152,11 +163,18 @@ public class EnemigoSeguidor : MonoBehaviour
 
     void Morir()
     {
+        if (audioSource != null && sonidoMuerte != null)
+        {
+            audioSource.PlayOneShot(sonidoMuerte); 
+        }
+
         if (sistemaXP != null)
         {
             sistemaXP.GanarExperiencia(35); // Gana 2 de experiencia al morir
         }
         Destroy(gameObject);
+
+        Destroy(gameObject, 0.2f); // Esperar a que suene el audio
     }
 
 }

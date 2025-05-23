@@ -12,8 +12,11 @@ public class InventarioJugador : MonoBehaviour
     public IArma armaEquipada;
     public TMP_Text textoMunicion;
 
+    private AnimacionJugador animacionJugador;
+
     void Start() 
     {
+        animacionJugador = GetComponent<AnimacionJugador>();
 
         if (textoMunicion != null)
         {
@@ -75,7 +78,7 @@ public class InventarioJugador : MonoBehaviour
             
             armaEquipada = null;
             ActualizarUIArma();
-            
+            ActualizarSpriteJugador();
             Destroy(objeto);
             Debug.Log($"Consumiste un bendaje y curaste {vidasACurar} corazones.");
         }
@@ -104,11 +107,12 @@ public class InventarioJugador : MonoBehaviour
                 if (arma != null) // Si tiene un componente Arma
                 {
                     armaEquipada = arma;  // Se asigna el arma al inventario
-                    if (i == casillaSeleccionada)
-                    {
-                        ActualizarUIArma();
-                    }
                     Debug.Log("Arma equipada: " + arma.GetType().Name);
+                }
+
+                if (i == casillaSeleccionada)
+                {
+                    SeleccionarCasilla(i);
                 }
                 
                 ActualizarHUD();  
@@ -136,6 +140,7 @@ public class InventarioJugador : MonoBehaviour
 
         ActualizarHUD();
         ActualizarUIArma();
+        ActualizarSpriteJugador();
     }
 
     void ActualizarHUD()
@@ -176,6 +181,7 @@ public class InventarioJugador : MonoBehaviour
             casillas[casillaSeleccionada].enabled = true;
 
             ActualizarHUD();
+            ActualizarSpriteJugador();
         }
     }
 
@@ -266,6 +272,29 @@ public class InventarioJugador : MonoBehaviour
             armaEquipada = null;
             ActualizarUIArma();
             ActualizarHUD();
+            ActualizarSpriteJugador();
             Debug.Log("Inventario vaciado.");
+    }
+
+    void ActualizarSpriteJugador()
+    {
+        if (animacionJugador == null) return;
+        
+        GameObject objeto = objetosEnInventario[casillaSeleccionada];
+        if (objeto == null)
+        {
+            animacionJugador.DesequiparItem(); // Vuelve al sprite por defecto
+            return;
+        }
+        
+        ObjetoRecogible recogible = objeto.GetComponent<ObjetoRecogible>();
+        if (recogible != null)
+        {
+            animacionJugador.EquiparItem(recogible.tipoItemEquipado); // Cambia sprite según tipo
+        }
+        else
+        {
+            animacionJugador.DesequiparItem(); // Si no tiene tipo definido, usa el default
+        }
     }
 }

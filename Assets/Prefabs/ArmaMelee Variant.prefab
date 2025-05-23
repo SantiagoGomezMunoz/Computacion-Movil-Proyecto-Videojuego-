@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2329997400845024551, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
+      propertyPath: m_Name
+      value: SonidoHacha
+      objectReference: {fileID: 0}
     - target: {fileID: 3973083229641192259, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
       propertyPath: iconoHUD
       value: 
@@ -15,6 +19,30 @@ PrefabInstance:
     - target: {fileID: 6225629163424304785, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
       propertyPath: m_Name
       value: ArmaMelee Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764377792270479642, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764377792270479642, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 973bc3c83cb36cc438c9dcd98d204b86, type: 3}
+    - target: {fileID: 6764377792270479642, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106324549984575460, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106324549984575460, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 973bc3c83cb36cc438c9dcd98d204b86, type: 3}
+    - target: {fileID: 7106324549984575460, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8190172958403171359, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
       propertyPath: proyectilPrefab
@@ -70,7 +98,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8190172958403171359, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2329997400845024551, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6225629163424304785, guid: 1570f676c6a21fe4cac735bfb3c8a0e6, type: 3}
@@ -101,3 +130,4 @@ MonoBehaviour:
     m_Bits: 8
   puntoAtaque: {fileID: 0}
   tiempoEntreAtaques: 0.5
+  sonidoGolpe: {fileID: 8300000, guid: 973bc3c83cb36cc438c9dcd98d204b86, type: 3}

@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class ObjetoRecogible : MonoBehaviour
 {
     public string ID;
     public Sprite iconoHUD;
-
+    public TipoItemEquipado tipoItemEquipado = TipoItemEquipado.Ninguno;
     private bool puedeRecogerse = true;
     public bool fueRecogido = false; // Para saber si ya fue recogido
 

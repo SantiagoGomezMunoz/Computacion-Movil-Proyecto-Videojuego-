@@ -8,12 +8,28 @@ public class Arma : MonoBehaviour, IArma
     public int municionMaxima = 30;
     public float velocidadProyectil = 20f;
 
+    public AudioClip sonidoDisparo; 
+    public AudioSource audioSource;
     private MovimientoPersonaje movimientoJugador;
     
     void Start()
     {
         // Buscar automáticamente el movimiento del jugador en la escena
         movimientoJugador = FindFirstObjectByType<MovimientoPersonaje>();
+
+        audioSource = GetComponent<AudioSource>();
+        
+        // CAMBIO: usar el AudioSource del jugador
+        GameObject jugador = GameObject.FindWithTag("Player");
+        if (jugador != null)
+        {
+            audioSource = jugador.GetComponent<AudioSource>();
+        }
+
+        if (audioSource == null)
+        {
+            Debug.LogWarning("AudioSource no encontrado en el arma equipada.");
+        }
 
         if (movimientoJugador == null)
         {
@@ -47,5 +63,13 @@ public class Arma : MonoBehaviour, IArma
         }
 
         municionActual--;
+
+        if (audioSource != null && sonidoDisparo != null)
+        {
+            Debug.Log("AudioSource asignado: " + (audioSource != null));
+            Debug.Log("Clip asignado: " + (sonidoDisparo != null ? sonidoDisparo.name : "null"));
+            audioSource.PlayOneShot(sonidoDisparo);
+        }
+        
     }
 }

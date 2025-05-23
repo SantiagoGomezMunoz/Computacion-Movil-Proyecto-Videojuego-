@@ -271,21 +271,21 @@ MonoBehaviour:
   textoUI: {fileID: 1139307431}
   velocidadEscritura: 0.05
   parrafosHistoria:
-  - "Es el a\xF1o 2060.\nEl mundo fue sometido por la reveli\xF3n de las m\xE1quinas,
-    todas al mando de su creadora...\nLa Super Inteligencia Aritificial HM2, acab\xF3
-    con todos los humanos.\nEspecie que a comparaci\xF3n de la inteligencia de las
-    m\xE1quinas, era supremamente inferior. Su dependencia a estas, la cual surgi\xF3
-    en d\xE9cadas pasadas fue su perdici\xF3n.\n-Presione Enter para saltar texto-"
-  - "Pero un hombre sobrevivir\xEDa para ver los vestigios del apocal\xEDpsis, el
-    mundo que conoci\xF3 devastado. Las m\xE1quinas le quitaron a su familia, y dentro
-    de s\xED solo surg\xEDa un sentimiento profundo de venganza.\nDecide salir de
-    su escondite, necesita llegar a la gran ciudad para encontrar m\xE1s respuestas
-    y conocer as\xED el camino que debe seguir para encontrar la forma de solucionar
-    la cat\xE1strofe que le quit\xF3 su felicidad.\n-Presione Enter para saltar texto-"
-  - "Se armar\xE1, y no solo de valor. Si no tambi\xE9n con armas para lograr su
-    cometido, buscar\xE1 la forma de abrirse paso hasta su destino.\n\nJurando ser
-    la \xFAnica persona en este mundo... O eso es lo que \xE9l cree.\n-Presione Enter
-    para saltar texto-"
+  - "-Presione Enter para saltar texto-\nEs el a\xF1o 2060.\nEl mundo fue sometido
+    por la reveli\xF3n de las m\xE1quinas, todas al mando de su creadora...\nLa Super
+    Inteligencia Aritificial HM2, acab\xF3 con todos los humanos.\nEspecie que a
+    comparaci\xF3n de la inteligencia de las m\xE1quinas, era supremamente inferior.
+    Su dependencia a estas, la cual surgi\xF3 en d\xE9cadas pasadas fue su perdici\xF3n."
+  - "-Presione Enter para saltar texto-\nPero un hombre sobrevivir\xEDa para ver
+    los vestigios del apocal\xEDpsis, el mundo que conoci\xF3 devastado. Las m\xE1quinas
+    le quitaron a su familia, y dentro de s\xED solo surg\xEDa un sentimiento profundo
+    de venganza.\nDecide salir de su escondite, necesita llegar a la gran ciudad
+    para encontrar m\xE1s respuestas y conocer as\xED el camino que debe seguir para
+    encontrar la forma de solucionar la cat\xE1strofe que le quit\xF3 su felicidad."
+  - "-Presione Enter para saltar texto-\nSe armar\xE1, y no solo de valor. Si no
+    tambi\xE9n con armas para lograr su cometido, buscar\xE1 la forma de abrirse
+    paso hasta su destino.\n\nJurando ser la \xFAnica persona en este mundo... O
+    eso es lo que \xE9l cree."
 --- !u!4 &334225962
 Transform:
   m_ObjectHideFlags: 0
@@ -296,6 +296,51 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1280, y: 1148, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &460852104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 460852106}
+  - component: {fileID: 460852105}
+  m_Layer: 0
+  m_Name: MusicaFondoHistoria
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &460852105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460852104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f744eee324f31f145b50230f8553e444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicaFondo: {fileID: 8300000, guid: 493292324306ebd48a19eba3be1c71a5, type: 3}
+--- !u!4 &460852106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460852104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1127.6654, y: 232.50468, z: -2517.7031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -454,8 +499,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -522,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 557}
+  m_AnchoredPosition: {x: -10, y: 390}
   m_SizeDelta: {x: 1500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1583159403
@@ -866,3 +911,4 @@ SceneRoots:
   - {fileID: 1720818881}
   - {fileID: 251360204}
   - {fileID: 334225962}
+  - {fileID: 460852106}

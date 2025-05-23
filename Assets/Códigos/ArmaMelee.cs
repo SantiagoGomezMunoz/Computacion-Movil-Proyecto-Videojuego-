@@ -54,8 +54,8 @@ public class ArmaCuerpoACuerpo : MonoBehaviour, IArma
                 Debug.Log("Golpeaste una barricada con el hacha.");
             }
         }
+        
     }
-
     void OnDrawGizmosSelected()
     {
         if (puntoAtaque != null)
