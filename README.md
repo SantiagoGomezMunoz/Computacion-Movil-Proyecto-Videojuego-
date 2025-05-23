@@ -10,4 +10,6 @@ Este proyecto nace de la necesidad de visualizar y tratar la actual dependencia 
 
 Combinando una serie de mecánicas varias para enriquecer la forma en cómo de desarrolla la historia del videojuego.
 
+CUALQUIER
+
 <figure><img src=".gitbook/assets/Captura de pantalla 2025-05-07 130156.png" alt="" width="188"><figcaption><p>CypherCTRL Logo</p></figcaption></figure>
