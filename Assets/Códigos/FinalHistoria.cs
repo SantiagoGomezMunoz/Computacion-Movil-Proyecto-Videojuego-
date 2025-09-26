@@ -23,7 +23,7 @@ public class FinalHistoria : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetMouseButtonDown(0)) // click izquierdo o tap
         {
             if (escribiendo)
             {
@@ -40,7 +40,7 @@ public class FinalHistoria : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("PantallaTitulo"); 
+                    SceneManager.LoadScene("PantallaTitulo");
                 }
             }
         }

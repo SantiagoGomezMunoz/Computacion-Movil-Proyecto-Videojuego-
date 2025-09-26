@@ -7,6 +7,7 @@ public class SpritesPorDireccion
     public Sprite[] spritesArriba;
     public Sprite[] spritesDerecha;
     public Sprite[] spritesIzquierda;
+    public Joystick joystick;
 }
 
 public enum TipoItemEquipado
@@ -46,9 +47,12 @@ public class AnimacionJugador : MonoBehaviour
     {
         Vector2 direccion = movimiento.DireccionMovimiento;
 
-        if (direccion.magnitude > 0.1f)
+        // Orientación corregida para que coincida con el joystick
+        Vector2 direccionCorregida = new Vector2(-direccion.y, direccion.x);
+
+        if (direccionCorregida.magnitude > 0.1f)
         {
-            ultimaDireccion = direccion;
+            ultimaDireccion = direccionCorregida;
 
             animTimer += Time.deltaTime;
             if (animTimer >= velocidadAnimacion)

@@ -30,7 +30,7 @@ public class IntroNarrativa : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetMouseButtonDown(0)) // click izquierdo o tap
         {
             if (escribiendo)
             {
@@ -44,7 +44,7 @@ public class IntroNarrativa : MonoBehaviour
                 if (!historiaTerminada)
                     MostrarSiguienteParrafo();
                 else
-                    SceneManager.LoadScene("EscenaPrincipal"); 
+                    SceneManager.LoadScene("EscenaPrincipal");
             }
         }
     }

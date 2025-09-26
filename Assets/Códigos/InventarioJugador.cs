@@ -5,7 +5,7 @@ using TMPro;
 public class InventarioJugador : MonoBehaviour
 {
     public Image[] casillas; // Se a asigna en el Inspector
-    public GameObject[] objetosEnInventario = new GameObject[3];
+    public GameObject[] objetosEnInventario = new GameObject[4];
     public int casillaSeleccionada = 0;
     public Transform puntoDeSoltar;
     public Sprite imagenPorDefecto;
@@ -30,21 +30,22 @@ public class InventarioJugador : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) SeleccionarCasilla(0);
         if (Input.GetKeyDown(KeyCode.Alpha2)) SeleccionarCasilla(1);
         if (Input.GetKeyDown(KeyCode.Alpha3)) SeleccionarCasilla(2);
+        if (Input.GetKeyDown(KeyCode.Alpha4)) SeleccionarCasilla(3);
         
         if (Input.GetKeyDown(KeyCode.Q)) SoltarObjeto();
         
-        if (Input.GetMouseButtonDown(0)) // Click izquierdo
-        {
-            if (armaEquipada != null)
-            {
-                armaEquipada.Usar();
-                ActualizarUIArma();
-            }
-            else if (armaEquipada == null)
-            {
-                Debug.Log("No tienes un arma equipada.");
-            }
-        }
+        //if (Input.GetMouseButtonDown(0)) // Click izquierdo
+        //{
+            //if (armaEquipada != null)
+            //{
+                //armaEquipada.Usar();
+                //ActualizarUIArma();
+            //}
+            //else if (armaEquipada == null)
+            //{
+                //Debug.Log("No tienes un arma equipada.");
+            //}
+        //}
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -83,47 +84,37 @@ public class InventarioJugador : MonoBehaviour
             Debug.Log($"Consumiste un bendaje y curaste {vidasACurar} corazones.");
         }
     }
-
     public bool AgregarObjeto(GameObject objeto)
     {
         for (int i = 0; i < objetosEnInventario.Length; i++)
         {
             if (objetosEnInventario[i] == null) // Si la casilla está vacía
             {
-                objetosEnInventario[i] = objeto;  // Asigna el objeto al inventario
+                objetosEnInventario[i] = objeto;
                 objeto.SetActive(false);
                 ObjetoRecogible data = objeto.GetComponent<ObjetoRecogible>();
-                
+
                 if (data != null && data.iconoHUD != null && casillas[i] != null)
                 {
                     casillas[i].sprite = data.iconoHUD;
                     casillas[i].enabled = true;
-                }
-                else
-                {
-                    Debug.LogWarning("Falta asignar casilla o ícono HUD en el objeto.");
-                }
-                IArma arma = objeto.GetComponent<IArma>();  // Se obtiene el componente Arma
-                if (arma != null) // Si tiene un componente Arma
-                {
-                    armaEquipada = arma;  // Se asigna el arma al inventario
-                    Debug.Log("Arma equipada: " + arma.GetType().Name);
+                    //casillas[i].raycastTarget = false; // evita que bloquee el click
                 }
 
                 if (i == casillaSeleccionada)
                 {
                     SeleccionarCasilla(i);
                 }
-                
-                ActualizarHUD();  
+
+                ActualizarHUD();
                 return true;
             }
         }
-        Debug.Log("Inventario lleno"); 
+        Debug.Log("Inventario lleno");
         return false;
     }
 
-    void SeleccionarCasilla(int indice)
+    public void SeleccionarCasilla(int indice)
     {
         casillaSeleccionada = indice;
 
@@ -141,6 +132,11 @@ public class InventarioJugador : MonoBehaviour
         ActualizarHUD();
         ActualizarUIArma();
         ActualizarSpriteJugador();
+    }
+
+    public void SeleccionarCasillaUI(int indice)
+    {
+        SeleccionarCasilla(indice);
     }
 
     void ActualizarHUD()
