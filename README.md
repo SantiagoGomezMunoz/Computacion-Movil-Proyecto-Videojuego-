@@ -11,11 +11,11 @@ Este proyecto nace de la necesidad de visualizar y tratar la actual dependencia 
 Combinando una serie de mecánicas varias para enriquecer la forma en cómo de desarrolla la historia del videojuego.
 
 PASOS PARA LA INSTALACIÓN:
-1. En este mismo repositorio, en la derecha, justo abajo de la pestaña "Releases" está la versión 1.0 del videojuego.
-2. Presione click en donde dice "Versión final 1.0 CypherCTRL: Calamity videojuego".
-3. Aparecen tres assets, uno dice "CypherCTRL.1.0.zip". Ese es al que se le debe dar click para descargar.
-4. Se descomprime el archivo .rar.
-5. Se ejecuta el ejecutable "My project.exe".
+1. En este mismo repositorio, en la derecha, justo abajo de la pestaña "Releases" está la versión APK 0.5 del videojuego
+2. Presione click en dicha release
+3. Aparecen tres assets, uno dice "CypherCTRLCalamity.apk". Ese es al que se le debe dar click para descargar.
+4. Cuando se descargue el APK del juego, mediante un cable USB. Pasar el APK al teléfono móvil.
+5. Instalar el APK en su teléfono móvil.
 6. A jugar!
 
 <figure><img src=".gitbook/assets/Captura de pantalla 2025-05-07 130156.png" alt="" width="188"><figcaption><p>CypherCTRL Logo</p></figcaption></figure>
