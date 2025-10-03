@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class ArmaCuerpoACuerpo : MonoBehaviour, IArma
+public class ArmaCuerpoACuerpo : MonoBehaviour, IArma, IApplyUpgrades
 {
     public float rangoAtaque = 2f;
     public int daño = 1;
-    public LayerMask capaEnemigos; 
+    public LayerMask capaEnemigos;
 
     public Transform puntoAtaque; // Punto desde donde se genera el golpe
 
@@ -20,7 +20,7 @@ public class ArmaCuerpoACuerpo : MonoBehaviour, IArma
     void Update()
     {
         if (inventario == null || (UnityEngine.Object)inventario.armaEquipada != this)
-        return;
+            return;
 
         if (Input.GetMouseButtonDown(0) && Time.time >= tiempoUltimoAtaque)
         {
@@ -50,11 +50,11 @@ public class ArmaCuerpoACuerpo : MonoBehaviour, IArma
             BarricadaDestructible barricada = enemigo.GetComponent<BarricadaDestructible>();
             if (barricada != null)
             {
-                barricada.RecibirGolpe("Hacha"); 
+                barricada.RecibirGolpe("Hacha");
                 Debug.Log("Golpeaste una barricada con el hacha.");
             }
         }
-        
+
     }
     void OnDrawGizmosSelected()
     {
@@ -62,6 +62,18 @@ public class ArmaCuerpoACuerpo : MonoBehaviour, IArma
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(puntoAtaque.position, rangoAtaque);
+        }
+    }
+    
+    public void ApplyUpgrades()
+    {
+        if (UpgradeManager.Instance != null)
+        {
+            int level = UpgradeManager.Instance.axeLevel;
+            if (level == 0) daño = 2;
+            else if (level == 1) daño = 3;
+            else if (level == 2) daño = 4;
+            else if (level == 3) daño = 5;
         }
     }
 }

@@ -110,7 +110,6 @@ public class MovimientoPersonaje : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         UpdateContactNormals(collision);
-        if (debugLogs) Debug.Log("OnCollisionEnter contactos: " + contactoNormals.Count);
     }
 
     private void OnCollisionStay(Collision collision)
@@ -122,7 +121,6 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         // al salir de un collider, borramos todos y dejaremos OnCollisionStay re-popular si sigue habiendo colisiones
         contactoNormals.Clear();
-        if (debugLogs) Debug.Log("OnCollisionExit, cleared normals");
     }
 
     private void UpdateContactNormals(Collision collision)

@@ -42,7 +42,6 @@ public class ChunkManager : MonoBehaviour
     {
         if (jugador == null)
         {
-            Debug.LogError("[ChunkManager] Asigna 'jugador' en el Inspector.");
             return;
         }
 
@@ -55,7 +54,6 @@ public class ChunkManager : MonoBehaviour
         Vector2Int initial = GetChunkGridForPosition(jugador.position);
         if (initial.x == int.MinValue)
         {
-            Debug.LogWarning("[ChunkManager] No se encontró chunk que contenga al jugador al inicio.");
             if (fallbackActivateNearest) ActivateNearestChunkToPosition(jugador.position);
         }
         else
@@ -110,7 +108,6 @@ public class ChunkManager : MonoBehaviour
                 center = cd.chunkObject.transform.position;
                 sizeX = 10f;
                 sizeZ = 10f;
-                Debug.LogWarning($"[ChunkManager] No encontré Renderers/Colliders en '{cd.name}'. Usa manualSize para precisión.");
             }
 
             float minX = center.x - sizeX * 0.5f;
@@ -120,8 +117,6 @@ public class ChunkManager : MonoBehaviour
             cd.centerWorld = center;
 
             chunkMap[cd.gridPosition] = cd;
-
-            Debug.Log($"[ChunkManager] Chunk '{cd.name}' grid={cd.gridPosition} boundsX=[{minX:F1},{minX+sizeX:F1}] Z=[{minZ:F1},{minZ+sizeZ:F1}]");
         }
     }
 
@@ -175,7 +170,6 @@ public class ChunkManager : MonoBehaviour
         }
 
         currentChunk = newChunk;
-        Debug.Log($"[ChunkManager] Jugador entró al chunk {newChunk} (precarga radio {preloadRadius})");
     }
 
     void ActivateChunk(Vector2Int pos)
@@ -186,7 +180,6 @@ public class ChunkManager : MonoBehaviour
             if (cd != null && cd.chunkObject != null)
             {
                 cd.chunkObject.SetActive(true);
-                Debug.Log($"  -> Activado chunk '{cd.name}' {pos}");
             }
         }
     }

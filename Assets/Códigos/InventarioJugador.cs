@@ -86,25 +86,30 @@ public class InventarioJugador : MonoBehaviour
     }
     public bool AgregarObjeto(GameObject objeto)
     {
+        for (int j = 0; j < objetosEnInventario.Length; j++)
+        {
+            if (objetosEnInventario[j] == objeto)
+            {
+                Debug.Log($"El objeto {objeto.name} ya está en el inventario.");
+                return false;
+            }
+        }
         for (int i = 0; i < objetosEnInventario.Length; i++)
         {
             if (objetosEnInventario[i] == null) // Si la casilla está vacía
             {
                 objetosEnInventario[i] = objeto;
-                objeto.SetActive(false);
-                ObjetoRecogible data = objeto.GetComponent<ObjetoRecogible>();
+                objeto.SetActive(false); // ocultamos la instancia real en escena
 
+                ObjetoRecogible data = objeto.GetComponent<ObjetoRecogible>();
                 if (data != null && data.iconoHUD != null && casillas[i] != null)
                 {
                     casillas[i].sprite = data.iconoHUD;
                     casillas[i].enabled = true;
-                    //casillas[i].raycastTarget = false; // evita que bloquee el click
                 }
 
                 if (i == casillaSeleccionada)
-                {
                     SeleccionarCasilla(i);
-                }
 
                 ActualizarHUD();
                 return true;
@@ -155,33 +160,33 @@ public class InventarioJugador : MonoBehaviour
         GameObject objeto = objetosEnInventario[casillaSeleccionada];
         if (objeto != null)
         {
-            Vector3 posicionSoltar = (puntoDeSoltar != null)
-                ? puntoDeSoltar.position
-                : transform.position + transform.forward;
-
+            Vector3 basePos = (puntoDeSoltar != null) ? puntoDeSoltar.position : transform.position + transform.forward;
+            Vector3 posicionSoltar = basePos + transform.forward * 0.6f;
             objeto.transform.position = posicionSoltar;
+            objeto.transform.rotation = Quaternion.identity;
+            objeto.transform.SetParent(null, true);
             objeto.SetActive(true);
-
+            Rigidbody rb = objeto.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
             ObjetoRecogible data = objeto.GetComponent<ObjetoRecogible>();
             if (data != null)
-            {
-                data.ActivarCooldown();
-            }
-
+                data.ResetearEstadoAfterDrop(0.8f);
             objetosEnInventario[casillaSeleccionada] = null;
             armaEquipada = null;
             ActualizarUIArma();
-            // Cambia nuevamente el sprite del slot
             casillas[casillaSeleccionada].sprite = imagenPorDefecto;
-            Debug.Log("Sprite restablecido a: " + imagenPorDefecto);
             casillas[casillaSeleccionada].enabled = true;
-
             ActualizarHUD();
             ActualizarSpriteJugador();
         }
     }
 
-    void ActualizarUIArma()
+    public void ActualizarUIArma()
     {
         if (armaEquipada != null)
         {
@@ -228,18 +233,6 @@ public class InventarioJugador : MonoBehaviour
 
     public void RestaurarInventario(string[] ids, int indiceSeleccionado, int municion)
     {
-        for (int i = 0; i < ids.Length; i++)
-        {
-            if (!string.IsNullOrEmpty(ids[i]))
-            {
-                GameObject prefab = GestorGuardado.ObtenerPrefabPorID(ids[i]);
-                if (prefab != null)
-                {
-                    GameObject obj = Instantiate(prefab);
-                    AgregarObjeto(obj); // Se coloca en el primer espacio libre
-                }
-            }
-        }
         
         SeleccionarCasilla(indiceSeleccionado);
         

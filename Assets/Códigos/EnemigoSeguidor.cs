@@ -9,7 +9,7 @@ public class EnemigoSeguidor : MonoBehaviour
     public float rangoPerdida = 15f;   // Distancia para dejar de seguir
 
     private bool persiguiendo = false; // Estado del enemigo
-    private Rigidbody rb;      
+    private Rigidbody rb;
 
     public int vida = 7;               // Vida del enemigo
 
@@ -24,9 +24,9 @@ public class EnemigoSeguidor : MonoBehaviour
     private float tiempoEspera = 0f; // Tiempo restante de espera
     private float tiempoMovimiento = 0f; // Tiempo restante de movimiento
     private Vector3 direccionPatrulla = Vector3.zero; // Dirección actual de patrullaje
-    
+
     public AudioClip sonidoDaño;
-    public AudioClip sonidoMuerte; 
+    public AudioClip sonidoMuerte;
     private AudioSource audioSource;
 
     void Start()
@@ -122,13 +122,13 @@ public class EnemigoSeguidor : MonoBehaviour
 
         //Retroceso
         Vector3 direccionEmpuje = (transform.position - objetivo.position).normalized;
-        rb.AddForce(direccionEmpuje * 4f, ForceMode.Impulse); 
+        rb.AddForce(direccionEmpuje * 4f, ForceMode.Impulse);
         // Cambio de color
         StartCoroutine(CambiarColorTemporal());
 
         if (audioSource != null && sonidoDaño != null)
         {
-            audioSource.PlayOneShot(sonidoDaño); 
+            audioSource.PlayOneShot(sonidoDaño);
         }
 
         if (vida <= 0)
@@ -165,7 +165,7 @@ public class EnemigoSeguidor : MonoBehaviour
     {
         if (audioSource != null && sonidoMuerte != null)
         {
-            audioSource.PlayOneShot(sonidoMuerte); 
+            audioSource.PlayOneShot(sonidoMuerte);
         }
 
         if (sistemaXP != null)
@@ -175,6 +175,7 @@ public class EnemigoSeguidor : MonoBehaviour
         Destroy(gameObject);
 
         Destroy(gameObject, 0.2f); // Esperar a que suene el audio
-    }
 
+        if (UpgradeManager.Instance != null) UpgradeManager.Instance.AddUpgradePoint(1);
+    }
 }

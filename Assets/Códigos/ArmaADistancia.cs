@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Arma : MonoBehaviour, IArma
+public class Arma : MonoBehaviour, IArma, IApplyUpgrades
 {
     public GameObject proyectilPrefab;
     public Transform puntoDisparo;
@@ -8,17 +8,23 @@ public class Arma : MonoBehaviour, IArma
     public int municionMaxima = 30;
     public float velocidadProyectil = 20f;
 
-    public AudioClip sonidoDisparo; 
+    public AudioClip sonidoDisparo;
     public AudioSource audioSource;
     private MovimientoPersonaje movimientoJugador;
-    
+
+    public interface IApplyUpgrades
+    {
+        void ApplyUpgrades();
+    }
+
+
     void Start()
     {
         // Buscar automáticamente el movimiento del jugador en la escena
         movimientoJugador = FindFirstObjectByType<MovimientoPersonaje>();
 
         audioSource = GetComponent<AudioSource>();
-        
+
         // CAMBIO: usar el AudioSource del jugador
         GameObject jugador = GameObject.FindWithTag("Player");
         if (jugador != null)
@@ -36,7 +42,7 @@ public class Arma : MonoBehaviour, IArma
             Debug.LogWarning("No se encontró el componente MovimientoPersonaje en la escena.");
         }
     }
-    
+
     public void Usar()
     {
         if (municionActual <= 0 || proyectilPrefab == null || puntoDisparo == null) return;
@@ -51,7 +57,7 @@ public class Arma : MonoBehaviour, IArma
 
         if (direccionDisparo == Vector3.zero)
         {
-            direccionDisparo = puntoDisparo.forward; 
+            direccionDisparo = puntoDisparo.forward;
         }
 
         GameObject proyectil = Instantiate(proyectilPrefab, puntoDisparo.position, Quaternion.LookRotation(direccionDisparo));
@@ -70,6 +76,38 @@ public class Arma : MonoBehaviour, IArma
             Debug.Log("Clip asignado: " + (sonidoDisparo != null ? sonidoDisparo.name : "null"));
             audioSource.PlayOneShot(sonidoDisparo);
         }
-        
+
+    }
+    
+public void ApplyUpgrades()
+    {
+        if (UpgradeManager.Instance != null)
+        {
+            int level = UpgradeManager.Instance.assaultRifleLevel;
+            if (level == 0)
+            {
+                municionMaxima = 30;
+            }
+            else if (level == 1)
+            {
+                municionMaxima = 45;
+            }
+            else if (level == 2)
+            {
+                municionMaxima = 60;
+            }
+            else if (level == 3)
+            {
+                municionMaxima = 75;
+            }
+
+            municionActual = municionMaxima; // recarga al mejorar
+            //Fuerza actualización inmediata del HUD
+            var inv = FindFirstObjectByType<InventarioJugador>();
+            if (inv != null && (Object)inv.armaEquipada == this)
+            {
+                inv.ActualizarUIArma();
+            }
+        }
     }
 }
