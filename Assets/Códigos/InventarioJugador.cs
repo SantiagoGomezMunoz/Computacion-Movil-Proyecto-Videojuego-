@@ -7,6 +7,9 @@ public class InventarioJugador : MonoBehaviour
     public Image[] casillas; // Se a asigna en el Inspector
     public GameObject[] objetosEnInventario = new GameObject[4];
     public int casillaSeleccionada = 0;
+    public int madera = 0;
+    public int piedra = 0;
+    public int metal = 0;
     public Transform puntoDeSoltar;
     public Sprite imagenPorDefecto;
     public IArma armaEquipada;
@@ -31,26 +34,103 @@ public class InventarioJugador : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2)) SeleccionarCasilla(1);
         if (Input.GetKeyDown(KeyCode.Alpha3)) SeleccionarCasilla(2);
         if (Input.GetKeyDown(KeyCode.Alpha4)) SeleccionarCasilla(3);
-        
+
         if (Input.GetKeyDown(KeyCode.Q)) SoltarObjeto();
-        
+
         //if (Input.GetMouseButtonDown(0)) // Click izquierdo
         //{
-            //if (armaEquipada != null)
-            //{
-                //armaEquipada.Usar();
-                //ActualizarUIArma();
-            //}
-            //else if (armaEquipada == null)
-            //{
-                //Debug.Log("No tienes un arma equipada.");
-            //}
+        //if (armaEquipada != null)
+        //{
+        //armaEquipada.Usar();
+        //ActualizarUIArma();
+        //}
+        //else if (armaEquipada == null)
+        //{
+        //Debug.Log("No tienes un arma equipada.");
+        //}
         //}
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             UsarObjetoCurativo();
         }
+    }
+
+    [Header("Textos HUD de materiales")]
+    public TMP_Text maderaTexto;
+    public TMP_Text piedraTexto;
+    public TMP_Text metalTexto;
+
+[Header("Slots visuales de materiales (icono + cantidad)")]
+    public Image slotMaderaIcon;
+    public TMP_Text slotCantidadMadera;
+
+    public Image slotPiedraIcon;
+    public TMP_Text slotCantidadPiedra;
+
+    public Image slotMetalIcon;
+    public TMP_Text slotCantidadMetal;
+
+    [Header("Sprites de los recursos")]
+    public Sprite iconoMadera;
+    public Sprite iconoPiedra;
+    public Sprite iconoMetal;
+
+    private void ActualizarInventarioHUD(){
+        Debug.Log($"Materiales -> Madera: {madera}, Piedra: {piedra}, Metal: {metal}");
+        // Textos HUD simples
+        if (maderaTexto != null)
+            maderaTexto.text = madera.ToString();
+        if (piedraTexto != null)
+            piedraTexto.text = piedra.ToString();
+        if (metalTexto != null)
+            metalTexto.text = metal.ToString();
+
+        // MADERA
+        if (slotMaderaIcon != null)
+        {
+            if (iconoMadera != null) slotMaderaIcon.sprite = iconoMadera;
+            slotMaderaIcon.gameObject.SetActive(madera > 0);
+        }
+        if (slotCantidadMadera != null)
+            slotCantidadMadera.text = (madera > 0) ? madera.ToString() : "";
+
+        // PIEDRA
+        if (slotPiedraIcon != null)
+        {
+            if (iconoPiedra != null) slotPiedraIcon.sprite = iconoPiedra;
+            slotPiedraIcon.gameObject.SetActive(piedra > 0);
+        }
+        if (slotCantidadPiedra != null)
+            slotCantidadPiedra.text = (piedra > 0) ? piedra.ToString() : "";
+
+        // METAL
+        if (slotMetalIcon != null)
+        {
+            if (iconoMetal != null) slotMetalIcon.sprite = iconoMetal;
+            slotMetalIcon.gameObject.SetActive(metal > 0);
+        }
+        if (slotCantidadMetal != null)
+            slotCantidadMetal.text = (metal > 0) ? metal.ToString() : "";
+    }
+    public void AgregarMaterial(TipoMaterial tipo, int cantidad)
+    {
+        switch (tipo)
+        {
+            case TipoMaterial.Madera:
+                madera += cantidad;
+                Debug.Log($"+{cantidad} madera (Total: {madera})");
+            break;
+            case TipoMaterial.Piedra:
+            piedra += cantidad;
+                Debug.Log($"+{cantidad} piedra (Total: {piedra})");
+                break;
+            case TipoMaterial.Metal:
+                metal += cantidad;
+                Debug.Log($"+{cantidad} metal (Total: {metal})");
+                break;
+            }
+        ActualizarInventarioHUD();
     }
 
     void UsarObjetoCurativo()

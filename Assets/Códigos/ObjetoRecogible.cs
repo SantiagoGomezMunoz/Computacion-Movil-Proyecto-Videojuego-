@@ -1,11 +1,22 @@
 using UnityEngine;
 using System.Collections;
+public enum TipoMaterial
+{
+    Ninguno,
+    Madera,
+    Piedra,
+    Metal
+}
 
 public class ObjetoRecogible : MonoBehaviour
 {
     public string ID;
     public Sprite iconoHUD;
     public TipoItemEquipado tipoItemEquipado = TipoItemEquipado.Ninguno;
+
+    [Header("Material recolectable (si aplica)")]
+    public TipoMaterial tipoMaterial = TipoMaterial.Ninguno;
+    public int cantidad = 1; // Cuántas unidades otorga al jugador
 
     [Tooltip("Si true: marcado como persistente (no reaparece cuando se suelta).")]
     public bool persistente = false;
@@ -18,7 +29,6 @@ public class ObjetoRecogible : MonoBehaviour
     public bool fueRecogido = false; // usado por inventario para saber si ya se tomó
 
     private GestorObjetivos gestorObjetivos;
-
     void Start()
     {
         gestorObjetivos = FindFirstObjectByType<GestorObjetivos>();
@@ -55,16 +65,29 @@ public class ObjetoRecogible : MonoBehaviour
 
         if (persistente && fueRecogido) return;
 
-        if (inventario.AgregarObjeto(gameObject))
+        if (tipoMaterial != TipoMaterial.Ninguno)
+        {
+            inventario.AgregarMaterial(tipoMaterial, cantidad);
+            fueRecogido = true;
+            gameObject.SetActive(false);
+            Debug.Log($"Recolectado {cantidad} de {tipoMaterial}");
+        }
+        else if (inventario.AgregarObjeto(gameObject))
         {
             fueRecogido = true;
             gameObject.SetActive(false);
-
-            if (gestorObjetivos != null)
-                gestorObjetivos.MarcarComoCumplido(ID);
-
-            Debug.Log($"ObjetoRecogible: {name} recogido por player. (via {source})");
         }
+
+        //if (inventario.AgregarObjeto(gameObject))
+        //{
+            //fueRecogido = true;
+            //gameObject.SetActive(false);
+
+            //if (gestorObjetivos != null)
+                //gestorObjetivos.MarcarComoCumplido(ID);
+
+            //Debug.Log($"ObjetoRecogible: {name} recogido por player. (via {source})");
+        //}
     }
 
     // Llamable desde fuera para forzar un cooldown (si quieres)

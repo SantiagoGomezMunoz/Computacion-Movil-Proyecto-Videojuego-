@@ -132,13 +132,6 @@ public class UpgradeManager : MonoBehaviour
                 aplicable.ApplyUpgrades();
         }
 
-        // Vida del jugador -> SOLO si es Vitality
-        if (vitalityLevel > 0)
-        {
-            var vida = FindFirstObjectByType<VidaJugador>();
-            if (vida != null) vida.ApplyVitalityUpgrades(1);
-        }
-
         var inventario = FindFirstObjectByType<InventarioJugador>();
         if (inventario != null && inventario.armaEquipada is IApplyUpgrades armaEquipada)
         {

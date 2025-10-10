@@ -53,8 +53,19 @@ public class ArmaCuerpoACuerpo : MonoBehaviour, IArma, IApplyUpgrades
                 barricada.RecibirGolpe("Hacha");
                 Debug.Log("Golpeaste una barricada con el hacha.");
             }
-        }
 
+            if (enemigo.CompareTag("Arbol"))
+            {
+                ArbolDestruible arbol = enemigo.GetComponent<ArbolDestruible>();
+                if (arbol != null)
+                {
+                    arbol.RecibirDano(1);
+                    Debug.Log("Golpeaste un árbol y le hiciste daño.");
+                }
+
+            }
+
+        }
     }
     void OnDrawGizmosSelected()
     {
