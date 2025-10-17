@@ -1,14 +1,22 @@
 using UnityEngine;
 
+[System.Serializable]
+public class DatosPersonaje
+{
+    public Sprite[] spritesAbajo;
+    public Sprite[] spritesArriba;
+    public Sprite[] spritesIzquierda;
+    public Sprite[] spritesDerecha;
+}
+
 public class PersonajeSeleccionado : MonoBehaviour
 {
     public static PersonajeSeleccionado Instancia;
 
-    public Sprite spriteSeleccionado; // Guardará el sprite del personaje elegido
+    public DatosPersonaje personajeDatos; // Aquí guardamos los sprites del personaje elegido
 
     private void Awake()
     {
-        // Aseguramos que no se destruya al cambiar de escena
         if (Instancia == null)
         {
             Instancia = this;
@@ -20,8 +28,8 @@ public class PersonajeSeleccionado : MonoBehaviour
         }
     }
 
-    public void SeleccionarPersonaje(Sprite sprite)
+    public void SeleccionarPersonaje(DatosPersonaje nuevoDatos)
     {
-        spriteSeleccionado = sprite;
+        personajeDatos = nuevoDatos;
     }
 }
