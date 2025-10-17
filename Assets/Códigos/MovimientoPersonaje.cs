@@ -132,6 +132,13 @@ public class MovimientoPersonaje : MonoBehaviour
             contactoNormals.Add(points[i].normal);
         }
     }
+    
+    public void RealizarAccionPrincipal()
+    {
+        // Lo que quieras que pase cuando NO hay NPC cerca.
+        // // Ejemplo: atacar, talar árbol, usar herramienta, etc.
+        Debug.Log("Realizando acción principal del jugador...");
+    }
 }
 
     /*void OnCollisionStay(Collision collision)

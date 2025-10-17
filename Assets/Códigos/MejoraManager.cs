@@ -13,17 +13,13 @@ public class UpgradeManager : MonoBehaviour
     [Range(0, 3)] public int axeLevel = 0;
     [Range(0, 3)] public int vitalityLevel = 0;
 
-    // COSTES
     public int[] assaultRifleCosts = new int[] { 4, 6, 8 };
     public int[] axeCosts = new int[] { 3, 5, 7 };
     public int[] vitalityCosts = new int[] { 7, 10, 13 };
 
-    // VALORES RESULTANTES (por nivel 1..3) - si quieres cambiar valores, cámbialos aquí
     public int[] assaultRifleAmmoByLevel = new int[] { 45, 60, 75 }; // level 1..3
     public int axeDamagePerLevel = 1; // cada nivel suma +1 daño
-    // vitality: cada nivel suma +1 corazón (total extra = vitalityLevel)
 
-    // Evento para notificar UI / otros cuando cambian mejoras o puntos
     public event Action OnUpgradesChanged;
 
     void Awake()
@@ -31,7 +27,6 @@ public class UpgradeManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        // Reiniciar mejoras siempre que se entra en PlayMode
         upgradePoints = 0;
         assaultRifleLevel = 0;
         axeLevel = 0;
@@ -133,17 +128,17 @@ public class UpgradeManager : MonoBehaviour
         }
 
         // Vida del jugador -> SOLO si es Vitality
-        if (vitalityLevel > 0)
-        {
-            var vida = FindFirstObjectByType<VidaJugador>();
-            if (vida != null) vida.ApplyVitalityUpgrades(1);
-        }
+        //if (vitalityLevel > 0)
+        //{
+            //var vida = FindFirstObjectByType<VidaJugador>();
+            //if (vida != null) vida.ApplyVitalityUpgrades(1);
+        //}
 
-        var inventario = FindFirstObjectByType<InventarioJugador>();
-        if (inventario != null && inventario.armaEquipada is IApplyUpgrades armaEquipada)
-        {
-            armaEquipada.ApplyUpgrades();
-        }
+        //var inventario = FindFirstObjectByType<InventarioJugador>();
+        //if (inventario != null && inventario.armaEquipada is IApplyUpgrades armaEquipada)
+        //{
+            //armaEquipada.ApplyUpgrades();
+        //}
     }
 
     // ---- Guardado simple (PlayerPrefs) ----

@@ -28,6 +28,8 @@ public class EnemigoSeguidor : MonoBehaviour
     public AudioClip sonidoDaño;
     public AudioClip sonidoMuerte;
     private AudioSource audioSource;
+    public GameObject prefabMetal;
+    public Transform PuntoSpawn;
 
     void Start()
     {
@@ -172,10 +174,17 @@ public class EnemigoSeguidor : MonoBehaviour
         {
             sistemaXP.GanarExperiencia(35); // Gana 2 de experiencia al morir
         }
-        Destroy(gameObject);
-
-        Destroy(gameObject, 0.2f); // Esperar a que suene el audio
+        
+        // 🔹 Instanciar el ítem de Metal
+        if (prefabMetal != null)
+        {
+            Vector3 posicionSpawn = (PuntoSpawn != null) ? PuntoSpawn.position : transform.position;
+            Vector3 offset = new Vector3(Random.Range(-0.2f, 0.2f), 0.2f, Random.Range(-0.2f, 0.2f)); // leve variación
+            Instantiate(prefabMetal, posicionSpawn + offset, Quaternion.identity);
+        }
 
         if (UpgradeManager.Instance != null) UpgradeManager.Instance.AddUpgradePoint(1);
+
+        Destroy(gameObject, 0.2f); // Esperar a que suene el audio
     }
 }
