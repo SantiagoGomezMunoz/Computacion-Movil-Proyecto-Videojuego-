@@ -95,7 +95,7 @@ public class IntroNarrativa : MonoBehaviour
             imagenUI.enabled = true;
 
             RectTransform rect = imagenUI.rectTransform;
-            rect.sizeDelta = new Vector2(4f, 3f);
+            rect.sizeDelta = new Vector2(8f, 6f);
             rect.anchoredPosition = new Vector2(0f, 50f);
 
             imagenUI.preserveAspect = true;
