@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class BotonSeleccion : MonoBehaviour
+public class BotonSeleccionPersonaje : MonoBehaviour
 {
-    public Sprite spriteDelPersonaje; // Asigna aquí el sprite del personaje desde el Inspector
+    public DatosPersonaje datosDelPersonaje;
+    public string escenaJuego = "EscenaPrincipal";
 
-    public void Seleccionar()
+    public void AlSeleccionarPersonaje()
     {
-        PersonajeSeleccionado.Instancia.SeleccionarPersonaje(spriteDelPersonaje);
-        SceneManager.LoadScene("EscenaPrincipal"); // cambia a tu escena de juego
+        PersonajeSeleccionado.Instancia.SeleccionarPersonaje(datosDelPersonaje);
+        SceneManager.LoadScene(escenaJuego);
     }
 }
