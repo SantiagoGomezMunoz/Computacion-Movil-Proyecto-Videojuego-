@@ -7,6 +7,8 @@ TagManager:
   - Enemigo
   - Arbol
   - ActionButton
+  - EfectoSonido
+  - Musica
   layers:
   - Default
   - TransparentFX

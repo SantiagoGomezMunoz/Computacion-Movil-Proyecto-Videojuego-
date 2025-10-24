@@ -3,27 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
-    public GameObject menuPausaUI;
+    public GameObject menuPausaUI; 
     private bool estaPausado = false;
 
     void Start()
     {
         menuPausaUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
-    void Update()
+    public void BotonPausa()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (estaPausado)
-            {
-                ReanudarJuego();
-            }
-            else
-            {
-                PausarJuego();
-            }
-        }
+        if (estaPausado)
+            ReanudarJuego();
+        else
+            PausarJuego();
     }
 
     public void ReanudarJuego()
@@ -43,6 +37,6 @@ public class MenuPausa : MonoBehaviour
     public void SalirAlMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("PantallaTitulo"); 
+        SceneManager.LoadScene("PantallaTitulo");
     }
 }

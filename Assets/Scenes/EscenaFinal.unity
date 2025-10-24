@@ -151,18 +151,18 @@ MonoBehaviour:
   textoUI: {fileID: 1642117454}
   velocidadTexto: 0.05
   parrafos:
-  - "-Presione Enter para continuar- \nEl jugador encontr\xF3 una radio en el suelo,
-    algo rota pero funcional al lado de un carro policial donde a pesar de las bajas
-    frecuencias a\xFAn se pod\xEDa escuchar a un agente solicitando refuerzos para
-    contrarrestar los ataques de los androides en un refugio de supervivientes."
-  - "-Presione Enter para continuar- \nEl hombre est\xE1 sorprendido, ya que pens\xF3
-    que era la \xFAnica persona con vida en el mundo, sin pensarlo tomar la rapido
-    y responde a la ayuda. \n- \"Hola, soy un superviviente... Ir\xE9 en camino\"."
-  - "-Presione Enter para continuar- \nQuiz\xE1s este encuentro con los supervivientes
-    le ayude al hombre a obtener las respuestas que necesita y lo lleve a salvar
-    al mundo... O lo que queda de \xE9l."
-  - "-Presione Enter para salir al men\xFA- \nLa Beta del videojuego CypherCTRL ha
-    finalizado. Muchas gracias por jugarlo."
+  - "El jugador encontr\xF3 una radio en el suelo, algo rota pero funcional al lado
+    de un carro policial donde a pesar de las bajas frecuencias a\xFAn se pod\xEDa
+    escuchar a un agente solicitando refuerzos para contrarrestar los ataques de
+    los androides en un refugio de supervivientes."
+  - " El hombre est\xE1 sorprendido, ya que pens\xF3 que era la \xFAnica persona
+    con vida en el mundo, sin pensarlo tomar la rapido y responde a la ayuda. \n-
+    \"Hola, soy un superviviente... Ir\xE9 en camino\"."
+  - "Quiz\xE1s este encuentro con los supervivientes le ayude al hombre a obtener
+    las respuestas que necesita y lo lleve a salvar al mundo... O lo que queda de
+    \xE9l."
+  - "La primera versi\xF3n del videojuego CypherCTRL:Calamity ha finalizado. Muchas
+    gracias por jugarlo."
 --- !u!4 &209625211
 Transform:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 579311560}
   - component: {fileID: 579311559}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImagenFondoNegro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,15 +205,15 @@ RectTransform:
   m_GameObject: {fileID: 579311557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6395, y: 0.12458585, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1675981631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 4000, y: 2000}
+  m_AnchoredPosition: {x: 0, y: -176}
+  m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579311559
 MonoBehaviour:
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 968909453}
   m_Layer: 0
   m_Name: MusicaPorEscena
-  m_TagString: Untagged
+  m_TagString: Musica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,8 +545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -251}
-  m_SizeDelta: {x: 1500, y: 0}
+  m_AnchoredPosition: {x: -4, y: -158}
+  m_SizeDelta: {x: 900, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642117454
 MonoBehaviour:
@@ -568,17 +568,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "-Presione Enter para continuar-\nEl  hombre encontr\xF3 una radio en el
-    suelo, algo rota pero funcional al lado de un carro policial donde a pesar de
-    las bajas frecuencias a\xFAn se pod\xEDa escuchar a un agente solicitando refuerzos
-    para contrarrestar los ataques de los androides en un refugio de supervivientes.\n\n-Presione
-    Enter para continuar-\nEl hombre est\xE1 sorprendido, ya que pens\xF3 que era
-    la \xFAnica persona con vida en el mundo, sin pensarlo tomar la rapido y responde
-    a la ayuda.\n- \"Hola, soy un superviviente... Ir\xE9 en camino\".\n\n-Presione
-    Enter para continuar-\nQuiz\xE1s este encuentro con los supervivientes le ayude
-    al hombre a obtener las respuestas que necesita y lo lleve a salvar al mundo...
-    O lo que queda de \xE9l.\n\n-Presione Enter para salir al men\xFA-\nLa Beta del
-    videojuego CypherCTRL ha finalizado.\nMuchas gracias por jugarlo.\n"
+  m_text: "El  hombre encontr\xF3 una radio en el suelo, algo rota pero funcional
+    al lado de un carro policial donde a pesar de las bajas frecuencias a\xFAn se
+    pod\xEDa escuchar a un agente solicitando refuerzos para contrarrestar los ataques
+    de los androides en un refugio de supervivientes.\n\nEl hombre est\xE1 sorprendido,
+    ya que pens\xF3 que era la \xFAnica persona con vida en el mundo, sin pensarlo
+    tomar la rapido y responde a la ayuda.\n- \"Hola, soy un superviviente... Ir\xE9
+    en camino\".\n\nQuiz\xE1s este encuentro con los supervivientes le ayude al hombre
+    a obtener las respuestas que necesita y lo lleve a salvar al mundo... O lo que
+    queda de \xE9l.\n\nLa Beta del videojuego CypherCTRL ha finalizado.\nMuchas gracias
+    por jugarlo.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -605,8 +604,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -751,6 +750,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2014584129}
   - {fileID: 579311558}
   - {fileID: 1642117453}
   - {fileID: 1697193556}
@@ -788,15 +788,15 @@ RectTransform:
   m_GameObject: {fileID: 1697193555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75247, y: 0.6756848, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1675981631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 139}
-  m_SizeDelta: {x: 600, y: 600}
+  m_AnchoredPosition: {x: 0, y: 54.65622}
+  m_SizeDelta: {x: 480.3939, y: 421.3609}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1697193557
 MonoBehaviour:
@@ -835,6 +835,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697193555}
+  m_CullTransparentMesh: 1
+--- !u!1 &2014584128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014584129}
+  - component: {fileID: 2014584131}
+  - component: {fileID: 2014584130}
+  m_Layer: 5
+  m_Name: ImagenFondo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2014584129
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014584128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6395, y: 0.43311024, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1675981631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 95}
+  m_SizeDelta: {x: 2000, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2014584130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014584128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c0ead0e5b49aab949a39c9922f73c865, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2014584131
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014584128}
   m_CullTransparentMesh: 1
 --- !u!1 &2088873220
 GameObject:

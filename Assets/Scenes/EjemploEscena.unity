@@ -963,6 +963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c86a16d8a0f5f8419c7232eaf3ccbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1o": 1
+  tiempoEntreAtaques: 2
 --- !u!1 &287551533 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1692167583707927736, guid: 320d224511e334349bcf4635e131d53a, type: 3}
@@ -1274,6 +1276,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 9
+  joystick: {fileID: 0}
+  pasosAudio: {fileID: 0}
+  sonidoPasos: {fileID: 0}
+  debugLogs: 0
 --- !u!114 &329186056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,12 +1311,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 5
   vidaActual: 5
-  corazones:
-  - {fileID: 319610678}
-  - {fileID: 2054556209}
-  - {fileID: 438899918}
-  - {fileID: 149638707}
-  - {fileID: 333404560}
+  panelMuerte: {fileID: 0}
+  movimiento: {fileID: 0}
+  puntoReaparicion: {fileID: 0}
+  "sonidoDa\xF1o": {fileID: 0}
+  sonidoCuracion: {fileID: 0}
+  sonidoMuerte: {fileID: 0}
+  prefabCorazon: {fileID: 0}
+  contenedorCorazones: {fileID: 0}
 --- !u!114 &329186058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1332,8 +1340,24 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   casillaSeleccionada: 0
+  madera: 0
+  piedra: 0
+  metal: 0
   puntoDeSoltar: {fileID: 0}
   imagenPorDefecto: {fileID: 21300000, guid: 84942d8081b8a9c42a5ef687eb64f77b, type: 3}
+  textoMunicion: {fileID: 0}
+  maderaTexto: {fileID: 0}
+  piedraTexto: {fileID: 0}
+  metalTexto: {fileID: 0}
+  slotMaderaIcon: {fileID: 0}
+  slotCantidadMadera: {fileID: 0}
+  slotPiedraIcon: {fileID: 0}
+  slotCantidadPiedra: {fileID: 0}
+  slotMetalIcon: {fileID: 0}
+  slotCantidadMetal: {fileID: 0}
+  iconoMadera: {fileID: 0}
+  iconoPiedra: {fileID: 0}
+  iconoMetal: {fileID: 0}
 --- !u!54 &329186059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13790,7 +13814,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c344673fd841499499eb548523ddc3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 
   iconoHUD: {fileID: 21300000, guid: 558f2f4edb4988144a4dba5845dcc9e5, type: 3}
+  tipoItemEquipado: 0
+  tipoMaterial: 0
+  cantidad: 1
+  persistente: 0
+  pickupCooldownOnDrop: 0.6
+  fueRecogido: 0
 --- !u!135 &1526574286
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14957,7 +14988,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c344673fd841499499eb548523ddc3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 
   iconoHUD: {fileID: 21300000, guid: 558f2f4edb4988144a4dba5845dcc9e5, type: 3}
+  tipoItemEquipado: 0
+  tipoMaterial: 0
+  cantidad: 1
+  persistente: 0
+  pickupCooldownOnDrop: 0.6
+  fueRecogido: 0
 --- !u!135 &2005372069
 SphereCollider:
   m_ObjectHideFlags: 0
