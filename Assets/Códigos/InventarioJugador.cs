@@ -198,7 +198,7 @@ public class InventarioJugador : MonoBehaviour
             if (objetosEnInventario[i] == null) // Si la casilla está vacía
             {
                 objetosEnInventario[i] = objeto;
-                objeto.SetActive(false); // ocultamos la instancia real en escena
+                objeto.SetActive(false); 
 
                 ObjetoRecogible data = objeto.GetComponent<ObjetoRecogible>();
                 if (data != null && data.iconoHUD != null && casillas[i] != null)
@@ -284,26 +284,35 @@ public class InventarioJugador : MonoBehaviour
             ActualizarSpriteJugador();
         }
     }
-
+    
     public void ActualizarUIArma()
     {
         if (armaEquipada != null)
         {
+            // Primer intento: arma de tipo "Arma" (fusil)
             Arma armaDistancia = armaEquipada as Arma;
             if (armaDistancia != null && textoMunicion != null)
             {
                 textoMunicion.text = armaDistancia.municionActual + "/" + armaDistancia.municionMaxima;
                 textoMunicion.enabled = true;
+                return;
+            }
+            
+            // Segundo intento: escopeta
+            ArmaEscopeta armaEscopeta = armaEquipada as ArmaEscopeta;
+            if (armaEscopeta != null && textoMunicion != null)
+            {
+                textoMunicion.text = armaEscopeta.municionActual + "/" + armaEscopeta.municionMaxima;
+                textoMunicion.enabled = true;
+                return;
+                }
+                
+            textoMunicion.enabled = false;
             }
             else
             {
+                if (textoMunicion != null)
                 textoMunicion.enabled = false;
-            }
-        }
-        else
-        {
-            if (textoMunicion != null)
-            textoMunicion.enabled = false;
         }
     }
 

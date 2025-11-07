@@ -1,10 +1,19 @@
 # ninja log v5
-20	762	7818409617062681	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	47f7cdce15ac4940
-27	776	7818409617193881	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	79f8bcf4f4b52307
-41	817	7818409617609055	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	9dc7722d847e7136
-8	822	7818409617659122	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c8eebd4fd00f9fdb
-49	896	7818409618402137	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9425ae666f1d1ee2
-14	906	7818409618503011	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3bc79cedddb6dbde
-33	1096	7818409620396318	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	32528c212310d6f6
-1	1122	7818409620647869	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	48b4926541d16201
-1122	1255	7818409621876631	D:/Unity Cosos/CypherCTRL-Calamity/CypherCTRL-Calamity2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/711z4ey4/obj/armeabi-v7a/libgame.so	d92ce1ebaf9b914f
+4	830	7836250302650004	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	47f7cdce15ac4940
+1216	1371	7836250307980438	D:/Unity Cosos/CypherCTRL-Calamity/CypherCTRL-Calamity2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/711z4ey4/obj/armeabi-v7a/libgame.so	d92ce1ebaf9b914f
+35	871	7836250303078144	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	79f8bcf4f4b52307
+27	1020	7836250304578783	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3bc79cedddb6dbde
+43	916	7836250303544040	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	9dc7722d847e7136
+64	998	7836250304342044	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9425ae666f1d1ee2
+12	899	7836250303372649	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c8eebd4fd00f9fdb
+53	1132	7836250305694396	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	32528c212310d6f6
+19	1215	7836250306501250	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	48b4926541d16201
+9	837	7836332936251296	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	47f7cdce15ac4940
+6	876	7836332936643308	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c8eebd4fd00f9fdb
+21	877	7836332936643308	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	79f8bcf4f4b52307
+15	888	7836332936762829	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	9dc7722d847e7136
+25	945	7836332937349641	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9425ae666f1d1ee2
+12	997	7836332937872826	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3bc79cedddb6dbde
+18	1139	7836332939282367	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	32528c212310d6f6
+3	1258	7836332940435320	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	48b4926541d16201
+1258	1409	7836332941886540	D:/Unity Cosos/CypherCTRL-Calamity/CypherCTRL-Calamity2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/711z4ey4/obj/armeabi-v7a/libgame.so	d92ce1ebaf9b914f

@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "D:\\Unity Cosos\\CypherCTRL-Calamity\\CypherCTRL-Calamity2\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\CMakeLists.txt",
+    "D:\\Unity Cosos\\CypherCTRL-Calamity\\CypherCTRL-Calamity2\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\GameActivity\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Unity\\Hub\\Editor\\6000.0.37f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "D:\\Unity Cosos\\CypherCTRL-Calamity\\CypherCTRL-Calamity2\\.utmp\\RelWithDebInfo\\711z4ey4\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Unity\\Hub\\Editor\\6000.0.37f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "D:\\Unity Cosos\\CypherCTRL-Calamity\\CypherCTRL-Calamity2\\.utmp\\RelWithDebInfo\\711z4ey4\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "artifactName": "game",
+      "abi": "x86",
+      "output": "D:\\Unity Cosos\\CypherCTRL-Calamity\\CypherCTRL-Calamity2\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\711z4ey4\\obj\\x86\\libgame.so",
+      "runtimeFiles": []
+    }
+  }
+}

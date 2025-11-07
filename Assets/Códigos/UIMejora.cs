@@ -24,6 +24,11 @@ public class UIUpgrade : MonoBehaviour
     public TMP_Text vitCostText;
     public Button vitBuyButton;
 
+    [Header("Shotgun (escopeta)")]
+    public TMP_Text shotgunLevelText;
+    public TMP_Text shotgunCostText;
+    public Button shotgunBuyButton;
+
     void Awake()
     {
         Instance = this;
@@ -33,10 +38,10 @@ public class UIUpgrade : MonoBehaviour
     {
         if (upgradePanel != null) upgradePanel.SetActive(false);
 
-        // bind clicks
         assaultBuyButton.onClick.AddListener(() => { PurchaseAssault(); });
         axeBuyButton.onClick.AddListener(() => { PurchaseAxe(); });
         vitBuyButton.onClick.AddListener(() => { PurchaseVitality(); });
+        shotgunBuyButton.onClick.AddListener(() => { PurchaseShotgun(); }); // 🔹 NUEVO
 
         if (UpgradeManager.Instance != null)
             UpgradeManager.Instance.OnUpgradesChanged += RefreshUI;
@@ -54,48 +59,41 @@ public class UIUpgrade : MonoBehaviour
     {
         if (UpgradeManager.Instance == null) return;
 
-        pointsText.text = $"Puntos: {UpgradeManager.Instance.upgradePoints}";
+        var up = UpgradeManager.Instance;
+        pointsText.text = $"Puntos: {up.upgradePoints}";
 
         // Assault
-        int aLevel = UpgradeManager.Instance.assaultRifleLevel;
-        assaultLevelText.text = $"Nivel: {aLevel}/3";
-        if (aLevel < 3) assaultCostText.text = $"Coste: {UpgradeManager.Instance.assaultRifleCosts[aLevel]}";
-        else assaultCostText.text = "Max";
-        assaultBuyButton.interactable = (aLevel < 3) && (UpgradeManager.Instance.upgradePoints >= UpgradeManager.Instance.assaultRifleCosts[aLevel]);
+        SetUpgradeUI(up.assaultRifleLevel, up.assaultRifleCosts, assaultLevelText, assaultCostText, assaultBuyButton);
 
         // Axe
-        int axL = UpgradeManager.Instance.axeLevel;
-        axeLevelText.text = $"Nivel: {axL}/3";
-        if (axL < 3) axeCostText.text = $"Coste: {UpgradeManager.Instance.axeCosts[axL]}";
-        else axeCostText.text = "Max";
-        axeBuyButton.interactable = (axL < 3) && (UpgradeManager.Instance.upgradePoints >= UpgradeManager.Instance.axeCosts[axL]);
+        SetUpgradeUI(up.axeLevel, up.axeCosts, axeLevelText, axeCostText, axeBuyButton);
 
         // Vitality
-        int vL = UpgradeManager.Instance.vitalityLevel;
-        vitLevelText.text = $"Nivel: {vL}/3";
-        if (vL < 3) vitCostText.text = $"Coste: {UpgradeManager.Instance.vitalityCosts[vL]}";
-        else vitCostText.text = "Max";
-        vitBuyButton.interactable = (vL < 3) && (UpgradeManager.Instance.upgradePoints >= UpgradeManager.Instance.vitalityCosts[vL]);
+        SetUpgradeUI(up.vitalityLevel, up.vitalityCosts, vitLevelText, vitCostText, vitBuyButton);
+
+        // Shotgun 
+        SetUpgradeUI(up.shotgunLevel, up.shotgunCosts, shotgunLevelText, shotgunCostText, shotgunBuyButton);
     }
 
-    public void PurchaseAssault()
+    void SetUpgradeUI(int level, int[] costs, TMP_Text levelText, TMP_Text costText, Button button)
     {
-        if (UpgradeManager.Instance.UpgradeAssaultRifle())
+        levelText.text = $"Nivel: {level}/3";
+        if (level < 3)
         {
-            // opcional: reproducir sonido/efecto
-            RefreshUI();
+            costText.text = $"Coste: {costs[level]}";
+            button.interactable = UpgradeManager.Instance.upgradePoints >= costs[level];
+        }
+        else
+        {
+            costText.text = "Max";
+            button.interactable = false;
         }
     }
 
-    public void PurchaseAxe()
-    {
-        if (UpgradeManager.Instance.UpgradeAxe()) RefreshUI();
-    }
-
-    public void PurchaseVitality()
-    {
-        if (UpgradeManager.Instance.UpgradeVitality()) RefreshUI();
-    }
+    public void PurchaseAssault() { if (UpgradeManager.Instance.UpgradeAssaultRifle()) RefreshUI(); }
+    public void PurchaseAxe() { if (UpgradeManager.Instance.UpgradeAxe()) RefreshUI(); }
+    public void PurchaseVitality() { if (UpgradeManager.Instance.UpgradeVitality()) RefreshUI(); }
+    public void PurchaseShotgun() { if (UpgradeManager.Instance.UpgradeShotgun()) RefreshUI(); } 
 
     public void UpdatePointsUI() => RefreshUI();
 }

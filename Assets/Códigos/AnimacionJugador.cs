@@ -15,7 +15,8 @@ public enum TipoItemEquipado
     Ninguno,
     Botiquin,
     Hacha,
-    Arma
+    Arma,
+    Escopeta   
 }
 
 public class AnimacionJugador : MonoBehaviour
@@ -26,6 +27,7 @@ public class AnimacionJugador : MonoBehaviour
     public SpritesPorDireccion spritesBotiquin;
     public SpritesPorDireccion spritesHacha;
     public SpritesPorDireccion spritesArma;
+    public SpritesPorDireccion spritesEscopeta; 
 
     public float velocidadAnimacion = 0.2f;
 
@@ -40,12 +42,13 @@ public class AnimacionJugador : MonoBehaviour
     void Start()
     {
         movimiento = GetComponentInParent<MovimientoPersonaje>();
-        spriteRenderer.sprite = spritesBase.spritesAbajo[0];
+        if (spritesBase != null && spritesBase.spritesAbajo.Length > 0)
+            spriteRenderer.sprite = spritesBase.spritesAbajo[0];
     }
 
     void Update()
     {
-        Vector2 direccion = movimiento.DireccionMovimiento;
+        Vector2 direccion = movimiento != null ? movimiento.DireccionMovimiento : Vector2.zero;
 
         // Orientación corregida para que coincida con el joystick
         Vector2 direccionCorregida = new Vector2(-direccion.y, direccion.x);
@@ -85,23 +88,30 @@ public class AnimacionJugador : MonoBehaviour
             case TipoItemEquipado.Arma:
                 spritesActuales = spritesArma;
                 break;
+            case TipoItemEquipado.Escopeta:
+                spritesActuales = spritesEscopeta;
+                break;
         }
 
-        Sprite[] sprites = spritesActuales.spritesAbajo;
+        Sprite[] sprites = spritesActuales != null ? spritesActuales.spritesAbajo : null;
 
-        if (Mathf.Abs(ultimaDireccion.x) > Mathf.Abs(ultimaDireccion.y))
+        if (spritesActuales != null)
         {
-            sprites = ultimaDireccion.x > 0 ? spritesActuales.spritesDerecha : spritesActuales.spritesIzquierda;
-        }
-        else
-        {
-            sprites = ultimaDireccion.y > 0 ? spritesActuales.spritesArriba : spritesActuales.spritesAbajo;
+            if (Mathf.Abs(ultimaDireccion.x) > Mathf.Abs(ultimaDireccion.y))
+            {
+                sprites = ultimaDireccion.x > 0 ? spritesActuales.spritesDerecha : spritesActuales.spritesIzquierda;
+            }
+            else
+            {
+                sprites = ultimaDireccion.y > 0 ? spritesActuales.spritesArriba : spritesActuales.spritesAbajo;
+            }
         }
 
-        if (sprites.Length > animFrame)
+        if (sprites != null && sprites.Length > 0)
+        {
+            if (animFrame >= sprites.Length) animFrame = 0;
             spriteRenderer.sprite = sprites[animFrame];
-        else
-            spriteRenderer.sprite = sprites[0]; // Previene error si faltan sprites
+        }
     }
 
     // Llamar cuando el jugador recoja o equipe un ítem
