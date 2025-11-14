@@ -18,12 +18,19 @@ MonoBehaviour:
   m_PlatformId: b9b35072a6f44c2e863f17467ea3dc13
   m_PlatformBuildProfile:
     rid: 3236357748982546432
-  m_OverrideGlobalSceneList: 0
-  m_Scenes: []
-  m_ScriptingDefines:
-  - 
-  - 
-  - 
+  m_OverrideGlobalSceneList: 1
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/PantallaTitulo.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/SelecciondePersonaje.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Historia.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/EscenaPrincipal.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/EscenaFinal.unity
+  m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
   references:

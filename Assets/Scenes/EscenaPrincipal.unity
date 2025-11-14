@@ -12432,116 +12432,427 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1223611901}
-  spritesBase:
-    spritesAbajo:
-    - {fileID: 21300000, guid: 97575eb4c3ae3e349b5691d3dd301798, type: 3}
-    - {fileID: 21300000, guid: 8a4d62e6af036fe429fc9f0360ec94a3, type: 3}
-    - {fileID: 21300000, guid: 97575eb4c3ae3e349b5691d3dd301798, type: 3}
-    - {fileID: 21300000, guid: 433d3c1e7244c5449835eb9d3e650e06, type: 3}
-    spritesArriba:
-    - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
-    - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
-    - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
-    - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
-    spritesDerecha:
-    - {fileID: 21300000, guid: eb4d359237a338c408d56d4c6edde26d, type: 3}
-    - {fileID: 21300000, guid: a684279ff5ff8c4419379d2eb4e14681, type: 3}
-    - {fileID: 21300000, guid: eb4d359237a338c408d56d4c6edde26d, type: 3}
-    - {fileID: 21300000, guid: 9c428f95028a1704b8c561900475f0d2, type: 3}
-    spritesIzquierda:
-    - {fileID: 21300000, guid: e94249f928e64de469866202a047e61a, type: 3}
-    - {fileID: 21300000, guid: 92da431c060e18445bc5e9b2804c53ba, type: 3}
-    - {fileID: 21300000, guid: e94249f928e64de469866202a047e61a, type: 3}
-    - {fileID: 21300000, guid: 08107ff4bb62f38468b3c3dcf6fa2033, type: 3}
-    joystick: {fileID: 1586884238}
-  spritesBotiquin:
-    spritesAbajo:
-    - {fileID: 21300000, guid: c15c817cd452efd41a059e66a0c2078d, type: 3}
-    - {fileID: 21300000, guid: 37c7f5319bd7c5b4baedb649d4d3bfce, type: 3}
-    - {fileID: 21300000, guid: c15c817cd452efd41a059e66a0c2078d, type: 3}
-    - {fileID: 21300000, guid: 57887c34be50a9d4da3971ebc0fd371e, type: 3}
-    spritesArriba:
-    - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
-    - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
-    - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
-    - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
-    spritesDerecha:
-    - {fileID: 21300000, guid: 9811a631f31e7ff41b5eec9b980dbbc2, type: 3}
-    - {fileID: 21300000, guid: 43211ba672f6c3a48b91352266aaa110, type: 3}
-    - {fileID: 21300000, guid: 9811a631f31e7ff41b5eec9b980dbbc2, type: 3}
-    - {fileID: 21300000, guid: 01e2c725c08ad3e41a4bd064e2bb7d4b, type: 3}
-    spritesIzquierda:
-    - {fileID: 21300000, guid: aaf84a61c821ae04caf7b3a042f75146, type: 3}
-    - {fileID: 21300000, guid: 2cfc00908bb623b43bf90fd21528fa74, type: 3}
-    - {fileID: 21300000, guid: aaf84a61c821ae04caf7b3a042f75146, type: 3}
-    - {fileID: 21300000, guid: 9eabe2ed999db6e449df5ffa1be0d34c, type: 3}
-    joystick: {fileID: 0}
-  spritesHacha:
-    spritesAbajo:
-    - {fileID: 21300000, guid: 6994a9e35bcbad44496365b2220243bb, type: 3}
-    - {fileID: 21300000, guid: 7403a2a979073074daaa838387c6d030, type: 3}
-    - {fileID: 21300000, guid: 6994a9e35bcbad44496365b2220243bb, type: 3}
-    - {fileID: 21300000, guid: 667f6322db930d84a931ac01a76f5b02, type: 3}
-    spritesArriba:
-    - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
-    - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
-    - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
-    - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
-    spritesDerecha:
-    - {fileID: 21300000, guid: eec5d7b608f3e1e49a082831b8562ef8, type: 3}
-    - {fileID: 21300000, guid: 3d193ef34b940974aa26faf525d0809a, type: 3}
-    - {fileID: 21300000, guid: eec5d7b608f3e1e49a082831b8562ef8, type: 3}
-    - {fileID: 21300000, guid: 35b8e728f15cc20409103c8740d80733, type: 3}
-    spritesIzquierda:
-    - {fileID: 21300000, guid: 0ce46863761113640854865c475a8ca5, type: 3}
-    - {fileID: 21300000, guid: c77f567786cd26b4d9cfa889d9fdc026, type: 3}
-    - {fileID: 21300000, guid: 0ce46863761113640854865c475a8ca5, type: 3}
-    - {fileID: 21300000, guid: 0b916396acc6b33458493b52fe3c375d, type: 3}
-    joystick: {fileID: 0}
-  spritesArma:
-    spritesAbajo:
-    - {fileID: 21300000, guid: 08f09254fc4a17b4dba404289f1defc9, type: 3}
-    - {fileID: 21300000, guid: 7418e958028d79441bf92a1eb1978f75, type: 3}
-    - {fileID: 21300000, guid: 08f09254fc4a17b4dba404289f1defc9, type: 3}
-    - {fileID: 21300000, guid: 57344b249c555564f9f5f036533601e7, type: 3}
-    spritesArriba:
-    - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
-    - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
-    - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
-    - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
-    spritesDerecha:
-    - {fileID: 21300000, guid: 6bdc680ca9d17114bbe9ab3deb34f6c9, type: 3}
-    - {fileID: 21300000, guid: 2c414db8391b24b4f9d7f60e1de5f1d8, type: 3}
-    - {fileID: 21300000, guid: 6bdc680ca9d17114bbe9ab3deb34f6c9, type: 3}
-    - {fileID: 21300000, guid: 22cf7a11953013f46aa4f82384fc3444, type: 3}
-    spritesIzquierda:
-    - {fileID: 21300000, guid: 131d8ec8499398a428889dd95ed526cf, type: 3}
-    - {fileID: 21300000, guid: b7499664210c43e458a4d5bf1069e6b3, type: 3}
-    - {fileID: 21300000, guid: 131d8ec8499398a428889dd95ed526cf, type: 3}
-    - {fileID: 21300000, guid: d04ed76e76f02b544be7e1dab7c9a2fe, type: 3}
-    joystick: {fileID: 0}
-  spritesEscopeta:
-    spritesAbajo:
-    - {fileID: 21300000, guid: 04fe6ec14211d65409ddd1afe12ca0f8, type: 3}
-    - {fileID: 21300000, guid: 7c1e213d14a38af4281263bcfd564ad9, type: 3}
-    - {fileID: 21300000, guid: 04fe6ec14211d65409ddd1afe12ca0f8, type: 3}
-    - {fileID: 21300000, guid: ce5285a9b9ee21946864bbaa4cec9d3a, type: 3}
-    spritesArriba:
-    - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
-    - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
-    - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
-    - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
-    spritesDerecha:
-    - {fileID: 21300000, guid: ed5d814abeaa3cd43a3955c14b265da5, type: 3}
-    - {fileID: 21300000, guid: 3458b31a692bee8499989149ed0cf3ad, type: 3}
-    - {fileID: 21300000, guid: ed5d814abeaa3cd43a3955c14b265da5, type: 3}
-    - {fileID: 21300000, guid: 01abc4d27e9b92b4893d4669e478526b, type: 3}
-    spritesIzquierda:
-    - {fileID: 21300000, guid: 7f1c6242ddbbe3849ab5a950bf09ebf3, type: 3}
-    - {fileID: 21300000, guid: 1cb02862616b4364cb43adc2801442c2, type: 3}
-    - {fileID: 21300000, guid: 7f1c6242ddbbe3849ab5a950bf09ebf3, type: 3}
-    - {fileID: 21300000, guid: 061aa95002cf4a24a85360846404912b, type: 3}
-    joystick: {fileID: 0}
+  personajes:
+  - baseSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 97575eb4c3ae3e349b5691d3dd301798, type: 3}
+      - {fileID: 21300000, guid: 8a4d62e6af036fe429fc9f0360ec94a3, type: 3}
+      - {fileID: 21300000, guid: 97575eb4c3ae3e349b5691d3dd301798, type: 3}
+      - {fileID: 21300000, guid: 433d3c1e7244c5449835eb9d3e650e06, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
+      - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
+      - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
+      - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: eb4d359237a338c408d56d4c6edde26d, type: 3}
+      - {fileID: 21300000, guid: 9c428f95028a1704b8c561900475f0d2, type: 3}
+      - {fileID: 21300000, guid: eb4d359237a338c408d56d4c6edde26d, type: 3}
+      - {fileID: 21300000, guid: a684279ff5ff8c4419379d2eb4e14681, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: e94249f928e64de469866202a047e61a, type: 3}
+      - {fileID: 21300000, guid: 08107ff4bb62f38468b3c3dcf6fa2033, type: 3}
+      - {fileID: 21300000, guid: e94249f928e64de469866202a047e61a, type: 3}
+      - {fileID: 21300000, guid: 92da431c060e18445bc5e9b2804c53ba, type: 3}
+    botiquinSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: c15c817cd452efd41a059e66a0c2078d, type: 3}
+      - {fileID: 21300000, guid: 37c7f5319bd7c5b4baedb649d4d3bfce, type: 3}
+      - {fileID: 21300000, guid: c15c817cd452efd41a059e66a0c2078d, type: 3}
+      - {fileID: 21300000, guid: 57887c34be50a9d4da3971ebc0fd371e, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
+      - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
+      - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
+      - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 9811a631f31e7ff41b5eec9b980dbbc2, type: 3}
+      - {fileID: 21300000, guid: 01e2c725c08ad3e41a4bd064e2bb7d4b, type: 3}
+      - {fileID: 21300000, guid: 9811a631f31e7ff41b5eec9b980dbbc2, type: 3}
+      - {fileID: 21300000, guid: 43211ba672f6c3a48b91352266aaa110, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: aaf84a61c821ae04caf7b3a042f75146, type: 3}
+      - {fileID: 21300000, guid: 9e40837fcbf6e7148aacde2896efd94f, type: 3}
+      - {fileID: 21300000, guid: aaf84a61c821ae04caf7b3a042f75146, type: 3}
+      - {fileID: 21300000, guid: 2cfc00908bb623b43bf90fd21528fa74, type: 3}
+    hachaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 6994a9e35bcbad44496365b2220243bb, type: 3}
+      - {fileID: 21300000, guid: 7403a2a979073074daaa838387c6d030, type: 3}
+      - {fileID: 21300000, guid: 6994a9e35bcbad44496365b2220243bb, type: 3}
+      - {fileID: 21300000, guid: 667f6322db930d84a931ac01a76f5b02, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
+      - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
+      - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
+      - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: eec5d7b608f3e1e49a082831b8562ef8, type: 3}
+      - {fileID: 21300000, guid: 35b8e728f15cc20409103c8740d80733, type: 3}
+      - {fileID: 21300000, guid: eec5d7b608f3e1e49a082831b8562ef8, type: 3}
+      - {fileID: 21300000, guid: 3d193ef34b940974aa26faf525d0809a, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 0ce46863761113640854865c475a8ca5, type: 3}
+      - {fileID: 21300000, guid: 0b916396acc6b33458493b52fe3c375d, type: 3}
+      - {fileID: 21300000, guid: 0ce46863761113640854865c475a8ca5, type: 3}
+      - {fileID: 21300000, guid: c77f567786cd26b4d9cfa889d9fdc026, type: 3}
+    armaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 08f09254fc4a17b4dba404289f1defc9, type: 3}
+      - {fileID: 21300000, guid: 7418e958028d79441bf92a1eb1978f75, type: 3}
+      - {fileID: 21300000, guid: 08f09254fc4a17b4dba404289f1defc9, type: 3}
+      - {fileID: 21300000, guid: 57344b249c555564f9f5f036533601e7, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
+      - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
+      - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
+      - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 6bdc680ca9d17114bbe9ab3deb34f6c9, type: 3}
+      - {fileID: 21300000, guid: 22cf7a11953013f46aa4f82384fc3444, type: 3}
+      - {fileID: 21300000, guid: 6bdc680ca9d17114bbe9ab3deb34f6c9, type: 3}
+      - {fileID: 21300000, guid: 2c414db8391b24b4f9d7f60e1de5f1d8, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 131d8ec8499398a428889dd95ed526cf, type: 3}
+      - {fileID: 21300000, guid: d04ed76e76f02b544be7e1dab7c9a2fe, type: 3}
+      - {fileID: 21300000, guid: 131d8ec8499398a428889dd95ed526cf, type: 3}
+      - {fileID: 21300000, guid: b7499664210c43e458a4d5bf1069e6b3, type: 3}
+    escopetaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 04fe6ec14211d65409ddd1afe12ca0f8, type: 3}
+      - {fileID: 21300000, guid: 7c1e213d14a38af4281263bcfd564ad9, type: 3}
+      - {fileID: 21300000, guid: 04fe6ec14211d65409ddd1afe12ca0f8, type: 3}
+      - {fileID: 21300000, guid: ce5285a9b9ee21946864bbaa4cec9d3a, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 52c042cc665994d4ab092d7f6f02808d, type: 3}
+      - {fileID: 21300000, guid: 8d1373d434c21284191612beb4f010e0, type: 3}
+      - {fileID: 21300000, guid: 76a34d890fdae8d44a13c59a9ee7d890, type: 3}
+      - {fileID: 21300000, guid: 7ec85f6a12f3d4242b8575d2ad120a2c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: ed5d814abeaa3cd43a3955c14b265da5, type: 3}
+      - {fileID: 21300000, guid: 01abc4d27e9b92b4893d4669e478526b, type: 3}
+      - {fileID: 21300000, guid: ed5d814abeaa3cd43a3955c14b265da5, type: 3}
+      - {fileID: 21300000, guid: 3458b31a692bee8499989149ed0cf3ad, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 7f1c6242ddbbe3849ab5a950bf09ebf3, type: 3}
+      - {fileID: 21300000, guid: 061aa95002cf4a24a85360846404912b, type: 3}
+      - {fileID: 21300000, guid: 7f1c6242ddbbe3849ab5a950bf09ebf3, type: 3}
+      - {fileID: 21300000, guid: 1cb02862616b4364cb43adc2801442c2, type: 3}
+  - baseSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: b2ccbe41e063c44428931681724ff1dd, type: 3}
+      - {fileID: 21300000, guid: 1dfceb4c70a3d594aae347c4cf5fbeaf, type: 3}
+      - {fileID: 21300000, guid: b2ccbe41e063c44428931681724ff1dd, type: 3}
+      - {fileID: 21300000, guid: de1cbc45c5cd2dc4f9bb142aad254e0b, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 90e876c8689f4be4ea5599bb2ebd369d, type: 3}
+      - {fileID: 21300000, guid: dfc3c59c85cf66643b8930cf920d7540, type: 3}
+      - {fileID: 21300000, guid: f72bf618cbbb5d5439a42d7b52915aeb, type: 3}
+      - {fileID: 21300000, guid: 54449e6a50a707b4599c44f0edfe06bf, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 5df2f8075e5b1b74bba9b91c49595712, type: 3}
+      - {fileID: 21300000, guid: 497b93682d0126b43b5e1bc7e7ea0e2d, type: 3}
+      - {fileID: 21300000, guid: 5df2f8075e5b1b74bba9b91c49595712, type: 3}
+      - {fileID: 21300000, guid: f6b40a8e57360c342abc13583dc97d17, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: cf2ef2a83c1fa1c49a992814766c1edb, type: 3}
+      - {fileID: 21300000, guid: 372eaebe8413e434eb2abb0a618523e1, type: 3}
+      - {fileID: 21300000, guid: cf2ef2a83c1fa1c49a992814766c1edb, type: 3}
+      - {fileID: 21300000, guid: abb1bf7e934e65c47a06aa8bb3f1b9bf, type: 3}
+    botiquinSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 40cfab452f4721a44afbf31cb819a28a, type: 3}
+      - {fileID: 21300000, guid: 490fb3064c490d74597fc48d6f4783d4, type: 3}
+      - {fileID: 21300000, guid: 40cfab452f4721a44afbf31cb819a28a, type: 3}
+      - {fileID: 21300000, guid: 8b7a8428da655f248b3d202ad80ee043, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 90e876c8689f4be4ea5599bb2ebd369d, type: 3}
+      - {fileID: 21300000, guid: dfc3c59c85cf66643b8930cf920d7540, type: 3}
+      - {fileID: 21300000, guid: f72bf618cbbb5d5439a42d7b52915aeb, type: 3}
+      - {fileID: 21300000, guid: 54449e6a50a707b4599c44f0edfe06bf, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 5bc84167ddbd7314ab2d5ab2a541be9a, type: 3}
+      - {fileID: 21300000, guid: 6ffa8254f1e425d44b146e59a0bb6642, type: 3}
+      - {fileID: 21300000, guid: 5bc84167ddbd7314ab2d5ab2a541be9a, type: 3}
+      - {fileID: 21300000, guid: fbb5a26b02e555045bacd0aba8faae88, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 1b9add0d1769c8346a1814d4d67fd674, type: 3}
+      - {fileID: 21300000, guid: 593cdb10c2e763e47b4c83245322b4b2, type: 3}
+      - {fileID: 21300000, guid: 1b9add0d1769c8346a1814d4d67fd674, type: 3}
+      - {fileID: 21300000, guid: ed634d98e23ba5d47be12ca072c828ab, type: 3}
+    hachaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 12002d70d1492fc45aa8280b63920a0e, type: 3}
+      - {fileID: 21300000, guid: 7dfe6cafa160d774c98a662cf6d4985b, type: 3}
+      - {fileID: 21300000, guid: 12002d70d1492fc45aa8280b63920a0e, type: 3}
+      - {fileID: 21300000, guid: b00cde7f859a2494694706ff5f3c1026, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 90e876c8689f4be4ea5599bb2ebd369d, type: 3}
+      - {fileID: 21300000, guid: dfc3c59c85cf66643b8930cf920d7540, type: 3}
+      - {fileID: 21300000, guid: f72bf618cbbb5d5439a42d7b52915aeb, type: 3}
+      - {fileID: 21300000, guid: 54449e6a50a707b4599c44f0edfe06bf, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 1202dc73c8e76864ea755dc1c279ed3f, type: 3}
+      - {fileID: 21300000, guid: 09183e92d8d7fc2449a7d54d12a17bae, type: 3}
+      - {fileID: 21300000, guid: 1202dc73c8e76864ea755dc1c279ed3f, type: 3}
+      - {fileID: 21300000, guid: 362cbb39218e2d54b81487c9f8e2693d, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 384150e125bdf3a419106cf4802ca2fd, type: 3}
+      - {fileID: 21300000, guid: f39b6acab2bd419459feee47d3d7c72b, type: 3}
+      - {fileID: 21300000, guid: 384150e125bdf3a419106cf4802ca2fd, type: 3}
+      - {fileID: 21300000, guid: fae3f4645e5061c4eaad37f02f5529b1, type: 3}
+    armaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 87b4ef4a6c98c9d43b1f6c2954af9da7, type: 3}
+      - {fileID: 21300000, guid: a31674f9af957a346bf0b3d7b0ed1294, type: 3}
+      - {fileID: 21300000, guid: 87b4ef4a6c98c9d43b1f6c2954af9da7, type: 3}
+      - {fileID: 21300000, guid: aaf94ffc70ed6eb43bf27a173bec39bb, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 90e876c8689f4be4ea5599bb2ebd369d, type: 3}
+      - {fileID: 21300000, guid: dfc3c59c85cf66643b8930cf920d7540, type: 3}
+      - {fileID: 21300000, guid: f72bf618cbbb5d5439a42d7b52915aeb, type: 3}
+      - {fileID: 21300000, guid: 54449e6a50a707b4599c44f0edfe06bf, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: eee945065a5f9c244845c5756eb2b683, type: 3}
+      - {fileID: 21300000, guid: c962c3caaad286e41b559e205e37efe3, type: 3}
+      - {fileID: 21300000, guid: eee945065a5f9c244845c5756eb2b683, type: 3}
+      - {fileID: 21300000, guid: 51508411032cefa4daa11605ec516807, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 9e5993d7e3c416443b0ce1884d99de48, type: 3}
+      - {fileID: 21300000, guid: 5224b7eb49f87d24c9570480744f1588, type: 3}
+      - {fileID: 21300000, guid: 9e5993d7e3c416443b0ce1884d99de48, type: 3}
+      - {fileID: 21300000, guid: d0d42b34c606e3341a7a4782ed119247, type: 3}
+    escopetaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: bbd4c5f5df7884247b1f83bdae70814f, type: 3}
+      - {fileID: 21300000, guid: f719e5f618d0a854c8ea8fe4225ae67a, type: 3}
+      - {fileID: 21300000, guid: bbd4c5f5df7884247b1f83bdae70814f, type: 3}
+      - {fileID: 21300000, guid: e83a2da01fc453541883390ec35d090e, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 90e876c8689f4be4ea5599bb2ebd369d, type: 3}
+      - {fileID: 21300000, guid: f72bf618cbbb5d5439a42d7b52915aeb, type: 3}
+      - {fileID: 21300000, guid: dfc3c59c85cf66643b8930cf920d7540, type: 3}
+      - {fileID: 21300000, guid: 54449e6a50a707b4599c44f0edfe06bf, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 62d5fce71e81a8f4a930694f9a9d3aeb, type: 3}
+      - {fileID: 21300000, guid: 3e3d13343b528184d942cd90af64cf5e, type: 3}
+      - {fileID: 21300000, guid: 62d5fce71e81a8f4a930694f9a9d3aeb, type: 3}
+      - {fileID: 21300000, guid: 2d4e663b07f6cdc4d8cbc1fba38dfa9d, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: c2439c5000bab444781dc1fc6dd9f18f, type: 3}
+      - {fileID: 21300000, guid: 4f2c814fbe249f44f9e6b0b0a95c50f0, type: 3}
+      - {fileID: 21300000, guid: c2439c5000bab444781dc1fc6dd9f18f, type: 3}
+      - {fileID: 21300000, guid: 6b40ac727e182684790b7f816d4918e7, type: 3}
+  - baseSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 860c5fa135a18dd459788cf0eb4418e3, type: 3}
+      - {fileID: 21300000, guid: 65c788f6ba5f561439f1d05939c20bd8, type: 3}
+      - {fileID: 21300000, guid: 860c5fa135a18dd459788cf0eb4418e3, type: 3}
+      - {fileID: 21300000, guid: c5f38dbfc2a3d54498b32057ebd4085c, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: a5deca08ea87b2b40b2ef0f0aa4c0a90, type: 3}
+      - {fileID: 21300000, guid: 8b218ecedc1b0b143b5636501fef6882, type: 3}
+      - {fileID: 21300000, guid: 51d7444b4715777469df99b68ed6b92f, type: 3}
+      - {fileID: 21300000, guid: f103fec1aa158494bb41b2d3b155033f, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: abe37079d1a1bdd4b91de454b1cd357e, type: 3}
+      - {fileID: 21300000, guid: 8235726bfd5c283449ca1219eeb3fb19, type: 3}
+      - {fileID: 21300000, guid: abe37079d1a1bdd4b91de454b1cd357e, type: 3}
+      - {fileID: 21300000, guid: ef1faa3bf982ed044842f096bb308665, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 9c7f89ef64a7233478cbe3a94edbe05f, type: 3}
+      - {fileID: 21300000, guid: ffb467e89b03bfe499977d87671b0cb0, type: 3}
+      - {fileID: 21300000, guid: 9c7f89ef64a7233478cbe3a94edbe05f, type: 3}
+      - {fileID: 21300000, guid: e82d96f9eef5e1e49a60b3a36fcd5f9c, type: 3}
+    botiquinSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: a44766be497a57e4a8b51e6edd55f7c2, type: 3}
+      - {fileID: 21300000, guid: 808e2a0da53def84fb34c6d8bce858e9, type: 3}
+      - {fileID: 21300000, guid: a44766be497a57e4a8b51e6edd55f7c2, type: 3}
+      - {fileID: 21300000, guid: 141bd9f9da1cb2446b5903677133b2bd, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: a5deca08ea87b2b40b2ef0f0aa4c0a90, type: 3}
+      - {fileID: 21300000, guid: 51d7444b4715777469df99b68ed6b92f, type: 3}
+      - {fileID: 21300000, guid: 8b218ecedc1b0b143b5636501fef6882, type: 3}
+      - {fileID: 21300000, guid: f103fec1aa158494bb41b2d3b155033f, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 16febb1fab11f2b498a5283bf91b40e7, type: 3}
+      - {fileID: 21300000, guid: d99b5d3f4dba6394eb9b6aaff5078ec7, type: 3}
+      - {fileID: 21300000, guid: 16febb1fab11f2b498a5283bf91b40e7, type: 3}
+      - {fileID: 21300000, guid: d5428f9cb04591b488dafb5011005308, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 1aafbfa5ffc8f0244a6d87d01f5f3995, type: 3}
+      - {fileID: 21300000, guid: df5541e2d05d6b145b70ab9ecb6d09d6, type: 3}
+      - {fileID: 21300000, guid: 1aafbfa5ffc8f0244a6d87d01f5f3995, type: 3}
+      - {fileID: 21300000, guid: d981a7b566464cc499a1614a26ef1b91, type: 3}
+    hachaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: b7208f752163bcd4093f98cac4b08a98, type: 3}
+      - {fileID: 21300000, guid: 88a84bd40b74a204ca6a2023dc768119, type: 3}
+      - {fileID: 21300000, guid: b7208f752163bcd4093f98cac4b08a98, type: 3}
+      - {fileID: 21300000, guid: 57b1b40ae7ab49842ac02dfb5a1daeb3, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: a5deca08ea87b2b40b2ef0f0aa4c0a90, type: 3}
+      - {fileID: 21300000, guid: 8b218ecedc1b0b143b5636501fef6882, type: 3}
+      - {fileID: 21300000, guid: 51d7444b4715777469df99b68ed6b92f, type: 3}
+      - {fileID: 21300000, guid: f103fec1aa158494bb41b2d3b155033f, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: fb0637ea24c266042879bcecbbf3dc57, type: 3}
+      - {fileID: 21300000, guid: 286bdab1461867d4c8a158b1376a9b8d, type: 3}
+      - {fileID: 21300000, guid: fb0637ea24c266042879bcecbbf3dc57, type: 3}
+      - {fileID: 21300000, guid: 333dfdd6cbe69a248b106c3e4471a7d6, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 28e00f907212cc248b80898059749d60, type: 3}
+      - {fileID: 21300000, guid: 959aad1b38a92824982e1e5d04da3024, type: 3}
+      - {fileID: 21300000, guid: 28e00f907212cc248b80898059749d60, type: 3}
+      - {fileID: 21300000, guid: 81a0526c5fccda540a77cbadc1c67640, type: 3}
+    armaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 0d1c12df658d94d43aaa50cbc2931fee, type: 3}
+      - {fileID: 21300000, guid: bea56c80b9385614c97b3e8e2dcd53c9, type: 3}
+      - {fileID: 21300000, guid: 0d1c12df658d94d43aaa50cbc2931fee, type: 3}
+      - {fileID: 21300000, guid: c9bbec689b08546468daf153293b2d94, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: a5deca08ea87b2b40b2ef0f0aa4c0a90, type: 3}
+      - {fileID: 21300000, guid: 8b218ecedc1b0b143b5636501fef6882, type: 3}
+      - {fileID: 21300000, guid: 51d7444b4715777469df99b68ed6b92f, type: 3}
+      - {fileID: 21300000, guid: f103fec1aa158494bb41b2d3b155033f, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: d85509172b997854db8480c6c04a2953, type: 3}
+      - {fileID: 21300000, guid: 6110452776341fd469845fe084fa6f98, type: 3}
+      - {fileID: 21300000, guid: d85509172b997854db8480c6c04a2953, type: 3}
+      - {fileID: 21300000, guid: 36d8068cbaeaa4b40806b45ff1c3a943, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: a2deacf7ea12470419fbf60d7d176e49, type: 3}
+      - {fileID: 21300000, guid: 8c4027aad760c2048808f39098d40339, type: 3}
+      - {fileID: 21300000, guid: a2deacf7ea12470419fbf60d7d176e49, type: 3}
+      - {fileID: 21300000, guid: 20ff4c9a1de042548971ea055d08b6c0, type: 3}
+    escopetaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 3f4e10dbcd7b88842a793b517fee6b2d, type: 3}
+      - {fileID: 21300000, guid: 86171e2cb47b39a47b67402f79987edf, type: 3}
+      - {fileID: 21300000, guid: 3f4e10dbcd7b88842a793b517fee6b2d, type: 3}
+      - {fileID: 21300000, guid: cbde696c04b32a04f8ecc550ca6317ec, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: a5deca08ea87b2b40b2ef0f0aa4c0a90, type: 3}
+      - {fileID: 21300000, guid: 8b218ecedc1b0b143b5636501fef6882, type: 3}
+      - {fileID: 21300000, guid: 51d7444b4715777469df99b68ed6b92f, type: 3}
+      - {fileID: 21300000, guid: f103fec1aa158494bb41b2d3b155033f, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: a7d11b15c66adef4c8170f5be8760046, type: 3}
+      - {fileID: 21300000, guid: 2028785bc30fee4498a580fd97128f12, type: 3}
+      - {fileID: 21300000, guid: a7d11b15c66adef4c8170f5be8760046, type: 3}
+      - {fileID: 21300000, guid: 17f6384d71f03f6449142f062f30f7c8, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 4998434c0a3d7e64b8ef188b0c3800dc, type: 3}
+      - {fileID: 21300000, guid: cf950656b87c2b140902df1f34a608fa, type: 3}
+      - {fileID: 21300000, guid: 4998434c0a3d7e64b8ef188b0c3800dc, type: 3}
+      - {fileID: 21300000, guid: f526a3e8f42336846a9c72381c27a78a, type: 3}
+  - baseSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 471d91c44740c154a986383eebead55e, type: 3}
+      - {fileID: 21300000, guid: eba4bc6fa32e871489c3e8277c446e12, type: 3}
+      - {fileID: 21300000, guid: 471d91c44740c154a986383eebead55e, type: 3}
+      - {fileID: 21300000, guid: 0cd277249fec1a14681f67705f710a22, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 8f5833abebe14c84e939d64aff5eade4, type: 3}
+      - {fileID: 21300000, guid: ed30712a87dbec445ad6508ca3624f3a, type: 3}
+      - {fileID: 21300000, guid: 83b811580840990469d9664ef143d8c3, type: 3}
+      - {fileID: 21300000, guid: 58dae63f7de0bda40aedae301a31e65c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 82f1926dfd3a4e349994922b550fb3a3, type: 3}
+      - {fileID: 21300000, guid: 96b10c42e2c7e564d8937221745f5e4d, type: 3}
+      - {fileID: 21300000, guid: 82f1926dfd3a4e349994922b550fb3a3, type: 3}
+      - {fileID: 21300000, guid: 8e178c36a0057ac4083b4c601e96a0eb, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 3339dd23d4f47a84c876ae853026d207, type: 3}
+      - {fileID: 21300000, guid: f57928584c3639240bb8e76dce4fbcf0, type: 3}
+      - {fileID: 21300000, guid: 3339dd23d4f47a84c876ae853026d207, type: 3}
+      - {fileID: 21300000, guid: 343ed97c4051a374eaf6069f8001f262, type: 3}
+    botiquinSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 9401cbe92380ebe4f8646f1ea5efcfda, type: 3}
+      - {fileID: 21300000, guid: f0b4cdaf6b3e72446a76ccf1bbb171da, type: 3}
+      - {fileID: 21300000, guid: 9401cbe92380ebe4f8646f1ea5efcfda, type: 3}
+      - {fileID: 21300000, guid: 6f0fc317fb429b046a61c8e37131af14, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 8f5833abebe14c84e939d64aff5eade4, type: 3}
+      - {fileID: 21300000, guid: ed30712a87dbec445ad6508ca3624f3a, type: 3}
+      - {fileID: 21300000, guid: 83b811580840990469d9664ef143d8c3, type: 3}
+      - {fileID: 21300000, guid: 58dae63f7de0bda40aedae301a31e65c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 382d0a96a5f26074998db118bfa290d9, type: 3}
+      - {fileID: 21300000, guid: d204922404b80394ea20390194a5b7e7, type: 3}
+      - {fileID: 21300000, guid: 382d0a96a5f26074998db118bfa290d9, type: 3}
+      - {fileID: 21300000, guid: e04c93432e0f9344aaaefe6cfb6a0325, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 28f2401bd5ad7d44fa659c112f5e600a, type: 3}
+      - {fileID: 21300000, guid: c6493df1bd49bb543af69e99bca6412f, type: 3}
+      - {fileID: 21300000, guid: 28f2401bd5ad7d44fa659c112f5e600a, type: 3}
+      - {fileID: 21300000, guid: c6b0ef210c315c743a5ccb6cb7dc7041, type: 3}
+    hachaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 504ae29d8eb59f7468207d8f1904f0e7, type: 3}
+      - {fileID: 21300000, guid: c7f8045bad6e6f949af8b13f4163b4d1, type: 3}
+      - {fileID: 21300000, guid: 504ae29d8eb59f7468207d8f1904f0e7, type: 3}
+      - {fileID: 21300000, guid: 3ddc88f9d957b1d4ab455e86bfe9fe99, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 8f5833abebe14c84e939d64aff5eade4, type: 3}
+      - {fileID: 21300000, guid: 83b811580840990469d9664ef143d8c3, type: 3}
+      - {fileID: 21300000, guid: ed30712a87dbec445ad6508ca3624f3a, type: 3}
+      - {fileID: 21300000, guid: 58dae63f7de0bda40aedae301a31e65c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 57c4db5f2fccbdd42a1b4424e8cb73c8, type: 3}
+      - {fileID: 21300000, guid: 86fb60dff22f86647924bf2e99b7da36, type: 3}
+      - {fileID: 21300000, guid: 57c4db5f2fccbdd42a1b4424e8cb73c8, type: 3}
+      - {fileID: 21300000, guid: 229011aa680139a4a8c07aca3c727ca3, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 2012b4d46d6acd44fbcf43b063095cfc, type: 3}
+      - {fileID: 21300000, guid: 0f650beab31c0cb44a8a0e5d14dc1c6e, type: 3}
+      - {fileID: 21300000, guid: 2012b4d46d6acd44fbcf43b063095cfc, type: 3}
+      - {fileID: 21300000, guid: 580ea43d88854304ea0bf3828d9a8d26, type: 3}
+    armaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: e75555d09a4605643b3839aa2f2de2f5, type: 3}
+      - {fileID: 21300000, guid: 88d99c69721f2d64883f984c2a899e95, type: 3}
+      - {fileID: 21300000, guid: e75555d09a4605643b3839aa2f2de2f5, type: 3}
+      - {fileID: 21300000, guid: 73b7c89055a30ee4e930215f9d109ff8, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 8f5833abebe14c84e939d64aff5eade4, type: 3}
+      - {fileID: 21300000, guid: ed30712a87dbec445ad6508ca3624f3a, type: 3}
+      - {fileID: 21300000, guid: 83b811580840990469d9664ef143d8c3, type: 3}
+      - {fileID: 21300000, guid: 58dae63f7de0bda40aedae301a31e65c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: 3a52a7f8029a4954f9bab00758086af9, type: 3}
+      - {fileID: 21300000, guid: fcaeb9873237c014684d2f3bdd267ab2, type: 3}
+      - {fileID: 21300000, guid: 3a52a7f8029a4954f9bab00758086af9, type: 3}
+      - {fileID: 21300000, guid: 6fd52fc27c33f144f8240c3ef998d566, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 900548078aefbc64c97f01b16dcc99d2, type: 3}
+      - {fileID: 21300000, guid: 1a94b8c7abbab0344b3f709a84f58f83, type: 3}
+      - {fileID: 21300000, guid: 900548078aefbc64c97f01b16dcc99d2, type: 3}
+      - {fileID: 21300000, guid: 6f6011597effe104a96cffd2732a822b, type: 3}
+    escopetaSprites:
+      spritesAbajo:
+      - {fileID: 21300000, guid: 9326f4fad30d47f429d2ef1cf9a9f49b, type: 3}
+      - {fileID: 21300000, guid: 4c180fd77dfdfba4caddd2e6cb1f51db, type: 3}
+      - {fileID: 21300000, guid: 9326f4fad30d47f429d2ef1cf9a9f49b, type: 3}
+      - {fileID: 21300000, guid: 9e45529dc80eaed4ba7725f7902c0ddf, type: 3}
+      spritesArriba:
+      - {fileID: 21300000, guid: 8f5833abebe14c84e939d64aff5eade4, type: 3}
+      - {fileID: 21300000, guid: 83b811580840990469d9664ef143d8c3, type: 3}
+      - {fileID: 21300000, guid: ed30712a87dbec445ad6508ca3624f3a, type: 3}
+      - {fileID: 21300000, guid: 58dae63f7de0bda40aedae301a31e65c, type: 3}
+      spritesDerecha:
+      - {fileID: 21300000, guid: c79c70663dffc6b488b143be5cc16e0d, type: 3}
+      - {fileID: 21300000, guid: c88678115a051894b906a346c04a69b8, type: 3}
+      - {fileID: 21300000, guid: c79c70663dffc6b488b143be5cc16e0d, type: 3}
+      - {fileID: 21300000, guid: 956f03f05931e7c4bbe7c250b9aa7e40, type: 3}
+      spritesIzquierda:
+      - {fileID: 21300000, guid: 57da055a05d700e40971f2239e7c9264, type: 3}
+      - {fileID: 21300000, guid: b814a03ee06331448a7b5998f6e00785, type: 3}
+      - {fileID: 21300000, guid: 57da055a05d700e40971f2239e7c9264, type: 3}
+      - {fileID: 21300000, guid: 5f5fb21ca7c37054598798397f4f8602, type: 3}
   velocidadAnimacion: 0.2
   itemEquipado: 0
 --- !u!82 &329186062
@@ -75539,7 +75850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1572811902
 RectTransform:
   m_ObjectHideFlags: 0

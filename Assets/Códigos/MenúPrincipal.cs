@@ -5,7 +5,7 @@ public class MenuPrincipal : MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene("Historia");
+        SceneManager.LoadScene("SelecciondePersonaje");
     }
 
     public void Salir()
