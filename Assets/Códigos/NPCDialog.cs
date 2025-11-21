@@ -38,8 +38,17 @@ public class NPCDialog : MonoBehaviour, IInteractable
     {
         if (panelDialogo != null) panelDialogo.SetActive(false);
 
-        if (darMaterialesBtn != null) darMaterialesBtn.onClick.AddListener(OnDarMaterialesClicked);
-        if (salirBtn != null) salirBtn.onClick.AddListener(CerrarPanel);
+        if (darMaterialesBtn != null)
+        {
+            darMaterialesBtn.onClick.RemoveAllListeners();
+            darMaterialesBtn.onClick.AddListener(OnDarMaterialesClicked);
+        }
+
+        if (salirBtn != null)
+        {
+            salirBtn.onClick.RemoveAllListeners();
+            salirBtn.onClick.AddListener(CerrarPanel);
+        }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) jugadorInventario = player.GetComponent<InventarioJugador>();
@@ -51,7 +60,6 @@ public class NPCDialog : MonoBehaviour, IInteractable
         jugadorEnRango = true;
         InteractionManager.Instance?.SetCurrent(this);
         Debug.Log("Jugador entró en rango del NPC");
-        InteractionManager.Instance?.SetCurrent(this);
     }
 
     void OnTriggerExit(Collider other)
@@ -62,7 +70,6 @@ public class NPCDialog : MonoBehaviour, IInteractable
         InteractionManager.Instance?.ClearCurrent(this);
     }
 
-    // 🔹 Implementación de la interfaz IInteractable
     public void Interact()
     {
         Debug.Log("Interact() llamado en NPCDialog, jugadorEnRango = " + jugadorEnRango);
@@ -98,7 +105,11 @@ public class NPCDialog : MonoBehaviour, IInteractable
 
     void OnDarMaterialesClicked()
     {
-        if (jugadorInventario == null) return;
+        if (jugadorInventario == null)
+        {
+            Debug.LogWarning("NPCDialog: jugadorInventario es null cuando se intenta dar materiales.");
+            return;
+        }
 
         bool tiene = jugadorInventario.TieneMateriales(reqMadera, reqPiedra, reqMetal);
         if (!tiene)
@@ -117,9 +128,31 @@ public class NPCDialog : MonoBehaviour, IInteractable
         }
 
         if (textoDialogo != null) textoDialogo.text = textoGracias;
-        if (barricada != null) Destroy(barricada);
+
+        // Destruye (o desactiva) la barricada
+        if (barricada != null)
+        {
+            Destroy(barricada);
+            barricada = null;
+        }
+
+        // Notificar al Gestor de Objetivos (usamos el ID "NPC")
+        var gestor = FindFirstObjectByType<GestorObjetivos>();
+        if (gestor != null)
+        {
+            gestor.MarcarComoCumplido("NPC");
+        }
+        else
+        {
+            Debug.LogWarning("NPCDialog: No se encontró GestorObjetivos en la escena.");
+        }
+
         ActualizarContadoresEnPanel();
-        if (darMaterialesBtn != null) darMaterialesBtn.interactable = false;
+
+        if (darMaterialesBtn != null)
+        {
+            darMaterialesBtn.interactable = false;
+        }
     }
 
     void ActualizarTextoAccion(string texto)

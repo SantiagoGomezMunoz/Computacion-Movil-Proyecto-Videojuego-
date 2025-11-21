@@ -65,11 +65,24 @@ public class ObjetoRecogible : MonoBehaviour
             fueRecogido = true;
             gameObject.SetActive(false);
             Debug.Log($"Recolectado {cantidad} de {tipoMaterial}");
+
+            var gestor = FindFirstObjectByType<GestorObjetivos>();
+            if (gestor != null && !string.IsNullOrEmpty(ID))
+            {
+                gestor.MarcarComoCumplido(ID);
+            }
+    
         }
         else if (inventario.AgregarObjeto(gameObject))
         {
             fueRecogido = true;
             gameObject.SetActive(false);
+
+            var gestor = FindFirstObjectByType<GestorObjetivos>();
+            if (gestor != null && !string.IsNullOrEmpty(ID))
+            {
+                gestor.MarcarComoCumplido(ID);
+            }
         }
 
         //if (inventario.AgregarObjeto(gameObject))
